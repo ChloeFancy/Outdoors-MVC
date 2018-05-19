@@ -76,6 +76,10 @@ public class BaseDAOImpl<T> implements BaseDAO<T> {
         for(int j=0 ; j<field.length; j++) { //遍历所有属性
             String name = field[j].getName(); //获取属性的名字
             String get = "get";
+            if(name.equals("id")){
+                //跳过id
+                continue;
+            }
             if(name.charAt(1)>='a'&&name.charAt(1)<='z'){
                 get+=name.substring(0,1).toUpperCase()+name.substring(1);
             }
@@ -87,10 +91,10 @@ public class BaseDAOImpl<T> implements BaseDAO<T> {
                 }
                 hql.append("a."+name+"='"+value + "'&");
             }
-            System.out.println(hql);
+//            System.out.println(hql);
         }
 
-        System.out.println(hql.substring(0,hql.length()-1).replace("&"," and "));
+//        System.out.println(hql.substring(0,hql.length()-1).replace("&"," and "));
         Query query = s.createQuery(hql.substring(0,hql.length()-1).replace("&"," and "));
 
         List list = query.list();
@@ -155,21 +159,6 @@ public class BaseDAOImpl<T> implements BaseDAO<T> {
     public int update(T t) throws Exception {
         Session s = sessionFactory.openSession();
         Transaction tx = s.beginTransaction();
-//        String className = t.getClass().getName();
-//        className = className.substring(className.indexOf(".")+1);
-//        Field[] field = t.getClass().getDeclaredFields();
-//        for(int j=0 ; j<field.length; j++) { //遍历所有属性
-//            String name = field[j].getName(); //获取属性的名字
-//            String get = "get";
-//            if(name.charAt(1)>='a'&&name.charAt(1)<='z'){
-//                get+=name.substring(0,1).toUpperCase()+name.substring(1);
-//            }else{
-//                get+=name;
-//            }
-//            Method m = t.getClass().getMethod(get);
-//            String value = (String) m.invoke(t);
-//            System.out.println("attribute name: " + name+", value: "+value);
-//        }
         s.update(t);
         tx.commit();
         return 0;

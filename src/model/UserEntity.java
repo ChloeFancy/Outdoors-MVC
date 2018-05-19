@@ -62,15 +62,18 @@ public class UserEntity {
         this.password = password;
     }
 
+
+    //用来验证用户登录
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         UserEntity that = (UserEntity) o;
-        return id == that.id &&
-                Objects.equals(name, that.name) &&
-                Objects.equals(mail, that.mail) &&
-                Objects.equals(tel, that.tel) &&
+        System.out.println(that.mail);
+        System.out.println(that.password);
+        return
+                (Objects.equals(mail, that.mail) ||
+                Objects.equals(tel, that.tel))&&
                 Objects.equals(password, that.password);
     }
 

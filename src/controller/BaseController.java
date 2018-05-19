@@ -1,6 +1,9 @@
 package controller;
 
 import DAO.Impl.BaseDAOImpl;
+import model.UserEntity;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import util.BasicResponse;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -8,6 +11,8 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpServletRequest;
 
+@Controller
+@CrossOrigin("http://localhost:8081")
 public abstract class BaseController<T> {
     @RequestMapping(value="/add",method={RequestMethod.POST})
     public @ResponseBody
@@ -24,6 +29,26 @@ public abstract class BaseController<T> {
                 response.setResMsg("success");
             }
         }catch (Exception ex){
+            ex.printStackTrace();
+        }
+        return response;
+    }
+
+    @RequestMapping(value="/login",method = {RequestMethod.GET})
+    public @ResponseBody
+    BasicResponse login(T t, HttpServletRequest request) {
+        BasicResponse response = new BasicResponse();
+        response.setResCode("-1");
+        response.setResMsg("Error");
+        try{
+            BaseDAOImpl<T> baseDAO = new BaseDAOImpl<>();
+            T result = baseDAO.findOne(t);
+            if(result!=null){
+                response.setResCode("1");
+                response.setResMsg("success");
+            }
+            return response;
+        }catch(Exception ex){
             ex.printStackTrace();
         }
         return response;

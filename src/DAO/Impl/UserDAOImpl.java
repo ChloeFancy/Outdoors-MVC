@@ -10,6 +10,7 @@ import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.hibernate.cfg.Configuration;
 import org.hibernate.query.Query;
+import util.BasicResponse;
 
 import javax.transaction.Transactional;
 import java.util.ArrayList;
@@ -40,5 +41,23 @@ public class UserDAOImpl implements UserDAO {
             resultList.add(json);
         }
         return JSONArray.parseArray(JSON.toJSONString(resultList));
+    }
+
+    @Override
+    public void login(UserEntity userEntity,BasicResponse basicResponse) {
+        String tel = userEntity.getTel();
+        String mail = userEntity.getMail();
+        String password = userEntity.getPassword();
+
+        Session s = sessionFactory.openSession();
+        Transaction tx = s.beginTransaction();
+
+        if(tel!=null){
+            //手机登录
+
+
+        }else if(mail!=null){
+            //邮件登录
+        }
     }
 }
