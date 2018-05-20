@@ -1,7 +1,6 @@
 package controller;
 
 import DAO.Impl.BaseDAOImpl;
-import model.UserEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import util.BasicResponse;

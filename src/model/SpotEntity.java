@@ -9,7 +9,7 @@ public class SpotEntity {
     private int id;
     private String name;
     private Integer idContinent;
-    private String countryName;
+    private Integer idCountry;
     private String shortIntro;
     private String introduction;
     private String photoPath;
@@ -45,13 +45,13 @@ public class SpotEntity {
     }
 
     @Basic
-    @Column(name = "countryName", nullable = true, length = 30)
-    public String getCountryName() {
-        return countryName;
+    @Column(name = "id_country", nullable = true)
+    public Integer getIdCountry() {
+        return idCountry;
     }
 
-    public void setCountryName(String countryName) {
-        this.countryName = countryName;
+    public void setIdCountry(Integer idCountry) {
+        this.idCountry = idCountry;
     }
 
     @Basic
@@ -92,7 +92,7 @@ public class SpotEntity {
         return id == that.id &&
                 Objects.equals(name, that.name) &&
                 Objects.equals(idContinent, that.idContinent) &&
-                Objects.equals(countryName, that.countryName) &&
+                Objects.equals(idCountry, that.idCountry) &&
                 Objects.equals(shortIntro, that.shortIntro) &&
                 Objects.equals(introduction, that.introduction) &&
                 Objects.equals(photoPath, that.photoPath);
@@ -101,6 +101,6 @@ public class SpotEntity {
     @Override
     public int hashCode() {
 
-        return Objects.hash(id, name, idContinent, countryName, shortIntro, introduction, photoPath);
+        return Objects.hash(id, name, idContinent, idCountry, shortIntro, introduction, photoPath);
     }
 }

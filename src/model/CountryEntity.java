@@ -4,10 +4,11 @@ import javax.persistence.*;
 import java.util.Objects;
 
 @Entity
-@Table(name = "continent", schema = "outdoors", catalog = "")
-public class ContinentEntity {
+@Table(name = "country", schema = "outdoors", catalog = "")
+public class CountryEntity {
     private int id;
     private String name;
+    private Integer idContinent;
     private String discription;
 
     @Id
@@ -21,13 +22,23 @@ public class ContinentEntity {
     }
 
     @Basic
-    @Column(name = "name", nullable = false, length = 6)
+    @Column(name = "name", nullable = false, length = 20)
     public String getName() {
         return name;
     }
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    @Basic
+    @Column(name = "id_continent", nullable = true)
+    public Integer getIdContinent() {
+        return idContinent;
+    }
+
+    public void setIdContinent(Integer idContinent) {
+        this.idContinent = idContinent;
     }
 
     @Basic
@@ -44,15 +55,16 @@ public class ContinentEntity {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        ContinentEntity that = (ContinentEntity) o;
+        CountryEntity that = (CountryEntity) o;
         return id == that.id &&
                 Objects.equals(name, that.name) &&
+                Objects.equals(idContinent, that.idContinent) &&
                 Objects.equals(discription, that.discription);
     }
 
     @Override
     public int hashCode() {
 
-        return Objects.hash(id, name, discription);
+        return Objects.hash(id, name, idContinent, discription);
     }
 }
