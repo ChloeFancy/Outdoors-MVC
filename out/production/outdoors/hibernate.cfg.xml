@@ -37,5 +37,9 @@
         <mapping class="model.TagEntity"/>
         <mapping resource="model/UserEntity.hbm.xml"/>
         <mapping class="model.UserEntity"/>
+        <mapping class="model.CountryEntity"/>
+        <mapping resource="model/CountryEntity.hbm.xml"/>
+        <mapping resource="model/FollowEntity.hbm.xml"/>
+        <mapping class="model.FollowEntity"/>
     </session-factory>
 </hibernate-configuration>

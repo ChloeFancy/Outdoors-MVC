@@ -14,8 +14,8 @@
         <property name="idContinent">
             <column name="id_continent" sql-type="int(11)" not-null="true"/>
         </property>
-        <property name="countryName">
-            <column name="countryName" sql-type="varchar(30)" length="30" not-null="true"/>
+        <property name="idCountry">
+            <column name="id_country" sql-type="int(11)" not-null="true"/>
         </property>
         <property name="shortIntro">
             <column name="shortIntro" sql-type="text" not-null="true"/>

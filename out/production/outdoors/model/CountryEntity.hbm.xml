@@ -4,12 +4,15 @@
     "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
 
-    <class name="model.ContinentEntity" table="continent" schema="outdoors">
+    <class name="model.CountryEntity" table="country" schema="outdoors">
         <id name="id">
             <column name="id" sql-type="int(11)"/>
         </id>
         <property name="name">
-            <column name="name" sql-type="char(6)" length="6"/>
+            <column name="name" sql-type="char(20)" length="20"/>
+        </property>
+        <property name="idContinent">
+            <column name="id_continent" sql-type="int(11)" not-null="true"/>
         </property>
         <property name="discription">
             <column name="discription" sql-type="text" not-null="true"/>

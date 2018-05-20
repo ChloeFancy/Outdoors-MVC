@@ -4,6 +4,7 @@ import DAO.UserDAO;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
+import model.UserEntity;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
@@ -43,7 +44,7 @@ public class UserDAOImpl implements UserDAO {
     }
 
     @Override
-    public void login(UserEntity userEntity,BasicResponse basicResponse) {
+    public void login(UserEntity userEntity, BasicResponse basicResponse) {
         String tel = userEntity.getTel();
         String mail = userEntity.getMail();
         String password = userEntity.getPassword();
