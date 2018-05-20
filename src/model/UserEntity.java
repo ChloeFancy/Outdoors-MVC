@@ -67,11 +67,10 @@ public class UserEntity {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         UserEntity that = (UserEntity) o;
-        return id == that.id &&
-                Objects.equals(name, that.name) &&
-                Objects.equals(mail, that.mail) &&
-                Objects.equals(tel, that.tel) &&
-                Objects.equals(password, that.password);
+        return
+            (Objects.equals(mail, that.mail) ||
+                Objects.equals(tel, that.tel))&&
+                    Objects.equals(password, that.password);
     }
 
     @Override
