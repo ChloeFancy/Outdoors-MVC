@@ -7,28 +7,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9f4314ae-ea76-434c-8e16-9bd756410f6e" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/src/controller/ContinentController.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../项目本体/Outdoors" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/outdoors_war_exploded2/WEB-INF/classes/DAO/BaseDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/outdoors_war_exploded2/WEB-INF/classes/DAO/BaseDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/outdoors_war_exploded2/WEB-INF/classes/DAO/Impl/BaseDAOImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/outdoors_war_exploded2/WEB-INF/classes/DAO/Impl/BaseDAOImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/outdoors_war_exploded2/WEB-INF/classes/controller/BaseController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/outdoors_war_exploded2/WEB-INF/classes/controller/BaseController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/outdoors_war_exploded2/WEB-INF/classes/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/outdoors_war_exploded2/WEB-INF/classes/controller/UserController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/outdoors_war_exploded2/WEB-INF/classes/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/outdoors_war_exploded2/WEB-INF/classes/hibernate.cfg.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/outdoors_war_exploded2/WEB-INF/classes/model/ContinentEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/outdoors_war_exploded2/WEB-INF/classes/model/ContinentEntity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/outdoors_war_exploded2/WEB-INF/classes/model/ContinentEntity.hbm.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/outdoors_war_exploded2/WEB-INF/classes/model/ContinentEntity.hbm.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/outdoors_war_exploded2/WEB-INF/classes/model/SpotEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/outdoors_war_exploded2/WEB-INF/classes/model/SpotEntity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/outdoors_war_exploded2/WEB-INF/classes/model/SpotEntity.hbm.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/outdoors_war_exploded2/WEB-INF/classes/model/SpotEntity.hbm.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/outdoors_war_exploded2/WEB-INF/classes/model/UserEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/outdoors_war_exploded2/WEB-INF/classes/model/UserEntity.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/outdoors/DAO/BaseDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/outdoors/DAO/BaseDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/outdoors/DAO/Impl/BaseDAOImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/outdoors/DAO/Impl/BaseDAOImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/outdoors/controller/BaseController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/outdoors/controller/BaseController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/outdoors/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/outdoors/controller/UserController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/outdoors/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/outdoors/hibernate.cfg.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/outdoors/model/ContinentEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/outdoors/model/ContinentEntity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/outdoors/model/ContinentEntity.hbm.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/outdoors/model/ContinentEntity.hbm.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/outdoors/model/SpotEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/outdoors/model/SpotEntity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/outdoors/model/SpotEntity.hbm.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/outdoors/model/SpotEntity.hbm.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/outdoors/model/UserEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/outdoors/model/UserEntity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DAO/Impl/UserDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DAO/Impl/UserDAOImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DAO/UserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DAO/UserDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/applicationContext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/applicationContext.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DAO/BaseDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DAO/BaseDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DAO/Impl/BaseDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DAO/Impl/BaseDAOImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/BaseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/BaseController.java" afterDir="false" />
       <change beforePath="E:/Vue Programs/Vue-ToDo-App" beforeDir="false" afterPath="E:/Vue Programs/Vue-ToDo-App" afterDir="false" />
       <change beforePath="E:/gitTest-a/gitTest/1_3_2.html" beforeDir="false" afterPath="E:/gitTest-a/gitTest/1_3_2.html" afterDir="false" />
     </list>
@@ -61,32 +51,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="UserController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/controller/UserController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="190">
-              <caret line="11" column="58" selection-start-line="11" selection-start-column="58" selection-end-line="11" selection-end-column="58" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserDAOImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/DAO/Impl/UserDAOImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="209">
-              <caret line="25" column="49" lean-forward="true" selection-start-line="25" selection-start-column="49" selection-end-line="25" selection-end-column="49" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BaseDAOImpl.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="BaseDAOImpl.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/DAO/Impl/BaseDAOImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1767">
-              <caret line="93" column="38" selection-start-line="93" selection-start-column="38" selection-end-line="93" selection-end-column="38" />
+            <state relative-caret-position="545">
+              <caret line="77" lean-forward="true" selection-start-line="77" selection-end-line="77" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -94,29 +63,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="applicationContext.xml" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/web/WEB-INF/applicationContext.xml">
+      <file leaf-file-name="BaseController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/controller/BaseController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="785">
-              <caret line="77" column="46" lean-forward="true" selection-start-line="77" selection-start-column="46" selection-end-line="77" selection-end-column="46" />
+            <state relative-caret-position="321">
+              <caret line="83" column="42" lean-forward="true" selection-start-line="83" selection-start-column="42" selection-end-line="83" selection-end-column="42" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="hibernate.cfg.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/hibernate.cfg.xml">
+      <file leaf-file-name="BaseDAO.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/DAO/BaseDAO.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="817">
-              <caret line="43" column="12" selection-start-line="43" selection-start-column="12" selection-end-line="43" selection-end-column="12" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserDAO.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/DAO/UserDAO.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="152">
-              <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+            <state relative-caret-position="171">
+              <caret line="9" column="18" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -143,18 +106,19 @@
         <option value="$PROJECT_DIR$/src/test/Test.java" />
         <option value="$PROJECT_DIR$/src/util/BasicResponse.java" />
         <option value="$PROJECT_DIR$/src/util/CharsetFilter.java" />
-        <option value="$PROJECT_DIR$/src/DAO/BaseDAO.java" />
         <option value="$PROJECT_DIR$/web/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/web/WEB-INF/dispatcher-servlet.xml" />
-        <option value="$PROJECT_DIR$/src/DAO/Impl/BaseDAOImpl.java" />
-        <option value="$PROJECT_DIR$/src/hibernate.cfg.xml" />
         <option value="$PROJECT_DIR$/src/Intercepter/Intercepter.java" />
         <option value="$PROJECT_DIR$/src/model/UserEntity.java" />
-        <option value="$PROJECT_DIR$/src/controller/BaseController.java" />
         <option value="$PROJECT_DIR$/src/controller/UserController.java" />
         <option value="$PROJECT_DIR$/src/DAO/Impl/UserDAOImpl.java" />
         <option value="$PROJECT_DIR$/src/DAO/UserDAO.java" />
         <option value="$PROJECT_DIR$/web/WEB-INF/applicationContext.xml" />
+        <option value="$PROJECT_DIR$/src/hibernate.cfg.xml" />
+        <option value="$PROJECT_DIR$/src/controller/ContinentController.java" />
+        <option value="$PROJECT_DIR$/src/DAO/BaseDAO.java" />
+        <option value="$PROJECT_DIR$/src/controller/BaseController.java" />
+        <option value="$PROJECT_DIR$/src/DAO/Impl/BaseDAOImpl.java" />
       </list>
     </option>
   </component>
@@ -174,10 +138,11 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="948" />
-    <option name="width" value="981" />
-    <option name="height" value="1032" />
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="-11" />
+    <option name="y" value="-11" />
+    <option name="width" value="1943" />
+    <option name="height" value="1043" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -218,12 +183,6 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="DAO" type="462c0819:PsiDirectoryNode" />
               <item name="Impl" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="outdoors" type="b2602c69:ProjectViewProjectNode" />
-              <item name="outdoors-05-17" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Intercepter" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="outdoors" type="b2602c69:ProjectViewProjectNode" />
@@ -360,6 +319,7 @@
       </deployment>
       <server-settings>
         <option name="BASE_DIRECTORY_NAME" value="Unnamed_outdoors" />
+        <option name="JNDI_PORT" value="1100" />
       </server-settings>
       <predefined_log_file id="Tomcat" enabled="true" />
       <predefined_log_file id="Tomcat Catalina" enabled="true" />
@@ -448,12 +408,12 @@
       <workItem from="1526699934698" duration="8381000" />
       <workItem from="1526714465204" duration="5605000" />
       <workItem from="1526736797403" duration="1383000" />
-      <workItem from="1526826390060" duration="495000" />
+      <workItem from="1526826390060" duration="3323000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="27847000" />
+    <option name="totallyTimeSpent" value="30675000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -465,7 +425,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
+    <frame x="-7" y="-7" width="1295" height="695" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
@@ -487,11 +447,11 @@
       <window_info anchor="bottom" id="Java Enterprise" order="7" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.3297491" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.27060932" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.30107528" />
       <window_info anchor="bottom" id="Spring" order="7" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.32795697" />
       <window_info id="Persistence" order="2" sideWeight="0.36200717" side_tool="true" weight="0.20937753" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.63799286" visible="true" weight="0.20937753" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.63799286" visible="true" weight="0.20937753" />
       <window_info id="Web" order="2" side_tool="true" />
       <window_info anchor="right" id="Theme Preview" order="3" />
       <window_info id="Favorites" order="2" side_tool="true" />
@@ -510,34 +470,13 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/DAO/Impl/UserDAOImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="19" selection-start-line="19" selection-end-line="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/DAO/UserDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="8" column="28" selection-start-line="8" selection-start-column="28" selection-end-line="8" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/DAO/Impl/BaseDAOImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2603">
-          <caret line="148" column="55" selection-start-line="148" selection-start-column="55" selection-end-line="148" selection-end-column="55" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/controller/BaseController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="266">
           <caret line="20" column="50" selection-start-line="20" selection-start-column="50" selection-end-line="20" selection-end-column="50" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -607,6 +546,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="266">
           <caret line="20" column="50" lean-forward="true" selection-start-line="20" selection-start-column="50" selection-end-line="20" selection-end-column="50" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -806,20 +748,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller/BaseController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1786">
-          <caret line="103" column="22" selection-start-line="103" selection-start-column="22" selection-end-line="103" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/UserEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="969">
-          <caret line="72" column="8" selection-start-line="72" selection-start-column="8" selection-end-line="72" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/model/CommentEntity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="114">
@@ -851,6 +779,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/applicationContext.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-298">
+          <caret line="68" lean-forward="true" selection-start-line="68" selection-end-line="68" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/hibernate.cfg.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="8" column="56" lean-forward="true" selection-start-line="8" selection-start-column="56" selection-end-line="8" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/DAO/Impl/UserDAOImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="209">
@@ -858,27 +800,51 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/DAO/Impl/BaseDAOImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/controller/ContinentController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1767">
-          <caret line="93" column="38" selection-start-line="93" selection-start-column="38" selection-end-line="93" selection-end-column="38" />
+        <state relative-caret-position="76">
+          <caret line="4" column="35" lean-forward="true" selection-start-line="4" selection-start-column="35" selection-end-line="4" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/CountryEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="11" column="31" lean-forward="true" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DAO/BaseDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="9" column="18" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controller/BaseController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="321">
+          <caret line="83" column="42" lean-forward="true" selection-start-line="83" selection-start-column="42" selection-end-line="83" selection-end-column="42" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/hibernate.cfg.xml">
+    <entry file="file://$PROJECT_DIR$/src/model/UserEntity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="817">
-          <caret line="43" column="12" selection-start-line="43" selection-start-column="12" selection-end-line="43" selection-end-column="12" />
+        <state relative-caret-position="267">
+          <caret line="72" column="60" lean-forward="true" selection-start-line="72" selection-start-column="60" selection-end-line="72" selection-end-column="60" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/applicationContext.xml">
+    <entry file="file://$PROJECT_DIR$/src/DAO/Impl/BaseDAOImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="785">
-          <caret line="77" column="46" lean-forward="true" selection-start-line="77" selection-start-column="46" selection-end-line="77" selection-end-column="46" />
+        <state relative-caret-position="545">
+          <caret line="77" lean-forward="true" selection-start-line="77" selection-end-line="77" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

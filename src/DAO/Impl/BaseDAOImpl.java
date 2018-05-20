@@ -33,6 +33,7 @@ public class BaseDAOImpl<T> implements BaseDAO<T> {
 
     @Override
     public T findOne(T t) throws Exception {
+        //登录专用
         //实现了login功能，因为判断实例是否相等时只判断了id、pwd
         try{
             Session s = sessionFactory.openSession();
@@ -53,6 +54,30 @@ public class BaseDAOImpl<T> implements BaseDAO<T> {
             }
             tx.commit();
             return null;
+        }catch (Exception ex){
+            ex.printStackTrace();
+        }
+        return null;
+    }
+
+    @Override
+    public T findById(T t) throws Exception {
+        try{
+            Session s = sessionFactory.openSession();
+            Transaction tx = s.beginTransaction();
+            String className = t.getClass().getName();
+            className = className.substring(className.indexOf(".")+1);
+
+            Method m = t.getClass().getMethod("getId");
+            String value = m.invoke(t).toString();
+
+            String hql = "from "+className+" as a where a.id="+value;
+            Query query = s.createQuery(hql);
+
+            List<T> list = query.list();
+
+            tx.commit();
+            return list.size()>0?list.get(0):null;
         }catch (Exception ex){
             ex.printStackTrace();
         }
@@ -124,10 +149,7 @@ public class BaseDAOImpl<T> implements BaseDAO<T> {
         List<T> resultList = new ArrayList<>();
 
         T administratorEntity=null;
-        String getpwd = "get"+className.substring(0,1).toLowerCase()+"Password";
-        String setPwd = getpwd.replace("get","set");
 
-        System.out.println(getpwd+"  "+setPwd);
         while(iterator.hasNext()){
             administratorEntity = (T)iterator.next();
 

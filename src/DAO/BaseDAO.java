@@ -7,6 +7,8 @@ public interface BaseDAO<T> {
 
     T findOne(T t) throws Exception;
 
+    T findById(T t) throws Exception;
+
     List<T> findByQuery(T t) throws Exception;
 
     List<T> findList(T t) throws Exception;

@@ -70,6 +70,25 @@ public abstract class BaseController<T> {
         return response;
     }
 
+
+    @RequestMapping(value="/findById",method = {RequestMethod.GET})
+    public @ResponseBody
+    BasicResponse findById(T t, HttpServletRequest request) {
+        BasicResponse response = new BasicResponse();
+        response.setResCode("-1");
+        response.setResMsg("Error");
+        BaseDAOImpl<T> admin = new BaseDAOImpl<>();
+        try{
+            response.setData(admin.findById(t));
+            response.setResCode("1");
+            response.setResMsg("success");
+            return response;
+        }catch(Exception ex){
+            ex.printStackTrace();
+        }
+        return null;
+    }
+
     @RequestMapping(value="/findAll",method = {RequestMethod.GET})
     public @ResponseBody
     BasicResponse findAll(T t, HttpServletRequest request) {
