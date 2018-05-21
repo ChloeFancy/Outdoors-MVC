@@ -68,6 +68,7 @@ public class BaseDAOImpl<T> implements BaseDAO<T> {
             String className = t.getClass().getName();
             className = className.substring(className.indexOf(".")+1);
 
+
             Method m = t.getClass().getMethod("getId");
             String value = m.invoke(t).toString();
 

@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpServletRequest;
+import java.lang.reflect.Method;
 
 @Controller
 @CrossOrigin("http://localhost:8081")
@@ -43,6 +44,10 @@ public abstract class BaseController<T> {
             BaseDAOImpl<T> baseDAO = new BaseDAOImpl<>();
             T result = baseDAO.findOne(t);
             if(result!=null){
+                Method m = t.getClass().getMethod("getId");
+                String value = m.invoke(t).toString();
+                request.getSession().setAttribute("session_id",value);
+
                 response.setResCode("1");
                 response.setResMsg("success");
             }
