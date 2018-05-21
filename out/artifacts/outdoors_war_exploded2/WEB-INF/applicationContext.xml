@@ -46,6 +46,8 @@
                 <value>model.StrategyEntity</value>
                 <value>model.TagEntity</value>
                 <value>model.UserEntity</value>
+                <value>model.CountryEntity</value>
+                <value>model.FollowEntity</value>
             </list>
         </property>
         <property name="mappingLocations">
@@ -57,6 +59,11 @@
                 <value>classpath:model/StrategyEntity.hbm.xml</value>
                 <value>classpath:model/TagEntity.hbm.xml</value>
                 <value>classpath:model/UserEntity.hbm.xml</value>
+                <value>classpath:model/CommentEntity.hbm.xml</value>
+                <value>classpath:model/CountryEntity.hbm.xml</value>
+                <value>classpath:model/FollowEntity.hbm.xml</value>
+                <value>classpath:model/SpotEntity.hbm.xml</value>
+                <value>classpath:model/TagEntity.hbm.xml</value>
             </list>
         </property>
     </bean>

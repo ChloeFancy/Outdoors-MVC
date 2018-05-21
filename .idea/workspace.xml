@@ -7,15 +7,57 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9f4314ae-ea76-434c-8e16-9bd756410f6e" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/outdoors_war_exploded2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/com_alibaba_fastjson_1_2_47.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/DAO/BaseDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../JavaEEExpemeriment5/src/messageResource_en _US.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../JavaEEExpemeriment5/src/messageResource_temp.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../JavaEEExpemeriment5/src/struts.properties" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../项目本体/Outdoors" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../作业/7/.idea/artifacts/JavaEEExperiment7_war_exploded.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../作业/7/.idea/dataSources.local.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../作业/7/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../作业/7/.idea/libraries/Hibernate_5_2_16_5_2_16.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../作业/7/.idea/libraries/Spring_4_3_16_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../作业/7/.idea/libraries/mysql_mysql_connector_java_5_1_26.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../作业/7/.idea/libraries/org_apache_commons_commons_dbcp2_2_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../作业/7/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../作业/7/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../作业/7/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../作业/7/JavaEEExperiment7.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../作业/7/src/dao/daoImpl/kcbDAOImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../作业/7/src/dao/kcbDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../作业/7/src/main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../作业/7/src/model/KcbEntity.hbm.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../作业/7/src/model/KcbEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../作业/7/src/model/XsbEntity.hbm.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../作业/7/src/model/XsbEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../作业/7/web/WEB-INF/applicationContext.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../作业/7/web/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/c0f3b175-e011-426f-81b4-fea4f4d367c1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/c0f3b175-e011-426f-81b4-fea4f4d367c1.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DAO/Impl/BaseDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DAO/Impl/BaseDAOImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/outdoors_war_exploded2/WEB-INF/applicationContext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/outdoors_war_exploded2/WEB-INF/applicationContext.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/outdoors_war_exploded2/WEB-INF/classes/model/CommentEntity.hbm.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/outdoors_war_exploded2/WEB-INF/classes/model/CommentEntity.hbm.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/outdoors_war_exploded2/WEB-INF/classes/model/ContinentEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/outdoors_war_exploded2/WEB-INF/classes/model/ContinentEntity.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/outdoors_war_exploded2/WEB-INF/classes/model/ContinentEntity.hbm.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/outdoors_war_exploded2/WEB-INF/classes/model/ContinentEntity.hbm.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/outdoors_war_exploded2/WEB-INF/classes/model/CountryEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/outdoors_war_exploded2/WEB-INF/classes/model/CountryEntity.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/outdoors_war_exploded2/WEB-INF/classes/model/CountryEntity.hbm.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/outdoors_war_exploded2/WEB-INF/classes/model/CountryEntity.hbm.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/outdoors_war_exploded2/WEB-INF/classes/model/FollowEntity.hbm.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/outdoors_war_exploded2/WEB-INF/classes/model/FollowEntity.hbm.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/outdoors_war_exploded2/WEB-INF/classes/model/SpotEntity.hbm.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/outdoors_war_exploded2/WEB-INF/classes/model/SpotEntity.hbm.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/outdoors_war_exploded2/WEB-INF/classes/model/UserEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/outdoors_war_exploded2/WEB-INF/classes/model/UserEntity.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/outdoors_war_exploded2/WEB-INF/classes/model/UserEntity.hbm.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/outdoors_war_exploded2/WEB-INF/classes/model/UserEntity.hbm.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/outdoors/model/CommentEntity.hbm.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/outdoors/model/CommentEntity.hbm.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/outdoors/model/ContinentEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/outdoors/model/ContinentEntity.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/outdoors/model/ContinentEntity.hbm.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/outdoors/model/ContinentEntity.hbm.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/outdoors/model/CountryEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/outdoors/model/CountryEntity.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/outdoors/model/CountryEntity.hbm.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/outdoors/model/CountryEntity.hbm.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/outdoors/model/FollowEntity.hbm.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/outdoors/model/FollowEntity.hbm.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/outdoors/model/SpotEntity.hbm.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/outdoors/model/SpotEntity.hbm.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/outdoors/model/UserEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/outdoors/model/UserEntity.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/outdoors/model/UserEntity.hbm.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/outdoors/model/UserEntity.hbm.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controller/BaseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/BaseController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/ContinentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/ContinentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/UserEntity.hbm.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/UserEntity.hbm.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/UserEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/UserEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/applicationContext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/applicationContext.xml" afterDir="false" />
       <change beforePath="E:/Vue Programs/Vue-ToDo-App" beforeDir="false" afterPath="E:/Vue Programs/Vue-ToDo-App" afterDir="false" />
       <change beforePath="E:/gitTest-a/gitTest/1_3_2.html" beforeDir="false" afterPath="E:/gitTest-a/gitTest/1_3_2.html" afterDir="false" />
     </list>
@@ -38,12 +80,7 @@
     <option name="HIDDEN_KINDS">
       <set />
     </option>
-    <expand>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="outdoors@118.25.108.103" type="feb32156:DbDataSourceImpl" />
-      </path>
-    </expand>
+    <expand />
     <select />
   </component>
   <component name="FileEditorManager">
@@ -51,8 +88,8 @@
       <file leaf-file-name="BaseDAOImpl.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/DAO/Impl/BaseDAOImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
-              <caret line="80" column="22" selection-start-line="80" selection-start-column="22" selection-end-line="80" selection-end-column="22" />
+            <state relative-caret-position="331">
+              <caret line="49" column="27" selection-start-line="49" selection-start-column="27" selection-end-line="49" selection-end-column="27" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -60,56 +97,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BaseController.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="UserEntity.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/model/UserEntity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="69" column="15" selection-start-line="69" selection-start-column="15" selection-end-line="69" selection-end-column="15" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BaseController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/controller/BaseController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="74">
-              <caret line="79" column="24" lean-forward="true" selection-start-line="79" selection-start-column="24" selection-end-line="79" selection-end-column="24" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/controller/UserController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-62">
-              <caret line="24" column="39" lean-forward="true" selection-start-line="24" selection-start-column="39" selection-end-line="24" selection-end-column="39" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ContinentController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/controller/ContinentController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="190">
-              <caret line="10" column="37" lean-forward="true" selection-start-line="10" selection-start-column="37" selection-end-line="10" selection-end-column="37" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserDAOImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/DAO/Impl/UserDAOImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="147">
-              <caret line="47" column="41" lean-forward="true" selection-start-line="47" selection-start-column="41" selection-end-line="47" selection-end-column="41" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BaseDAO.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/DAO/BaseDAO.java">
-          <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="171">
-              <caret line="9" column="18" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
+              <caret line="44" column="34" lean-forward="true" selection-start-line="44" selection-start-column="34" selection-end-line="44" selection-end-column="34" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -139,16 +143,19 @@
         <option value="$PROJECT_DIR$/web/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/web/WEB-INF/dispatcher-servlet.xml" />
         <option value="$PROJECT_DIR$/src/Intercepter/Intercepter.java" />
-        <option value="$PROJECT_DIR$/src/model/UserEntity.java" />
         <option value="$PROJECT_DIR$/src/controller/UserController.java" />
         <option value="$PROJECT_DIR$/src/DAO/Impl/UserDAOImpl.java" />
         <option value="$PROJECT_DIR$/src/DAO/UserDAO.java" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/applicationContext.xml" />
         <option value="$PROJECT_DIR$/src/hibernate.cfg.xml" />
         <option value="$PROJECT_DIR$/src/DAO/BaseDAO.java" />
         <option value="$PROJECT_DIR$/src/controller/ContinentController.java" />
         <option value="$PROJECT_DIR$/src/DAO/Impl/BaseDAOImpl.java" />
+        <option value="$PROJECT_DIR$/src/model/ContinentEntity.hbm.xml" />
+        <option value="$PROJECT_DIR$/src/model/CommentEntity.hbm.xml" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/applicationContext.xml" />
+        <option value="$PROJECT_DIR$/src/model/UserEntity.hbm.xml" />
         <option value="$PROJECT_DIR$/src/controller/BaseController.java" />
+        <option value="$PROJECT_DIR$/src/model/UserEntity.java" />
       </list>
     </option>
   </component>
@@ -182,6 +189,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="AndroidView" />
       <pane id="ProjectPane">
@@ -236,7 +244,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -255,16 +262,16 @@
     <property name="settings.editor.selected.configurable" value="spring" />
   </component>
   <component name="RecentsManager">
-    <key name="ImportMappingsDialog.RecentPackages">
-      <recent name="model" />
-      <recent name="" />
-    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="controller" />
       <recent name="DAO.Impl" />
       <recent name="DAO" />
       <recent name="Intercepter" />
       <recent name="util" />
+    </key>
+    <key name="ImportMappingsDialog.RecentPackages">
+      <recent name="model" />
+      <recent name="" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\2017-2018学年\春季学期\java ee\courseProject\outdoors-05-17\src" />
@@ -440,11 +447,12 @@
       <workItem from="1526736797403" duration="1383000" />
       <workItem from="1526826390060" duration="3323000" />
       <workItem from="1526868349379" duration="1240000" />
+      <workItem from="1526921012396" duration="2061000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="31915000" />
+    <option name="totallyTimeSpent" value="33976000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -472,23 +480,23 @@
       <window_info id="UI Designer" order="2" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.49462366" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3297491" />
+      <window_info anchor="bottom" id="Messages" order="7" weight="0.3297491" />
       <window_info anchor="right" id="Palette&#9;" order="3" />
       <window_info id="Image Layers" order="2" />
       <window_info anchor="bottom" id="Java Enterprise" order="7" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.3297491" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.30107528" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.18996416" />
       <window_info anchor="bottom" id="Spring" order="7" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.32795697" />
-      <window_info id="Persistence" order="2" sideWeight="0.36200717" side_tool="true" weight="0.20937753" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.63799286" visible="true" weight="0.21261115" />
+      <window_info id="Persistence" order="2" sideWeight="0.11386139" side_tool="true" weight="0.21584478" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.8861386" visible="true" weight="0.21584478" />
       <window_info id="Web" order="2" side_tool="true" />
       <window_info anchor="right" id="Theme Preview" order="3" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Messages" order="7" weight="0.3297491" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Find" order="1" />
@@ -501,37 +509,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/controller/BaseController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="20" column="50" selection-start-line="20" selection-start-column="50" selection-end-line="20" selection-end-column="50" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/applicationContext.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1729">
-          <caret line="91" column="40" selection-start-line="91" selection-start-column="40" selection-end-line="91" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/hibernate.cfg.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="12" column="28" selection-start-line="12" selection-start-column="28" selection-end-line="12" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/dispatcher-servlet.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="11" column="20" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="209">
@@ -751,13 +728,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/dispatcher-servlet.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="741">
-          <caret line="39" column="19" selection-start-line="39" selection-start-column="19" selection-end-line="39" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="209">
@@ -779,31 +749,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/CommentEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/CommentEntity.hbm.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="4" column="19" lean-forward="true" selection-start-line="4" selection-start-column="19" selection-end-line="4" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/DAO/UserDAO.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="152">
           <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/applicationContext.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-298">
-          <caret line="68" lean-forward="true" selection-start-line="68" selection-end-line="68" />
         </state>
       </provider>
     </entry>
@@ -828,17 +777,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/UserEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="267">
-          <caret line="72" column="60" lean-forward="true" selection-start-line="72" selection-start-column="60" selection-end-line="72" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/controller/ContinentController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="190">
-          <caret line="10" column="37" lean-forward="true" selection-start-line="10" selection-start-column="37" selection-end-line="10" selection-end-column="37" />
+          <caret line="10" column="37" selection-start-line="10" selection-start-column="37" selection-end-line="10" selection-end-column="37" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -847,38 +789,101 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/DAO/Impl/UserDAOImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="47" column="41" lean-forward="true" selection-start-line="47" selection-start-column="41" selection-end-line="47" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/DAO/Impl/BaseDAOImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="80" column="22" selection-start-line="80" selection-start-column="22" selection-end-line="80" selection-end-column="22" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="627">
+          <caret line="47" column="41" selection-start-line="47" selection-start-column="41" selection-end-line="47" selection-end-column="41" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/controller/UserController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-62">
-          <caret line="24" column="39" lean-forward="true" selection-start-line="24" selection-start-column="39" selection-end-line="24" selection-end-column="39" />
+        <state relative-caret-position="399">
+          <caret line="24" column="39" selection-start-line="24" selection-start-column="39" selection-end-line="24" selection-end-column="39" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/dispatcher-servlet.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="122">
+          <caret line="39" column="19" selection-start-line="39" selection-start-column="19" selection-end-line="39" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/applicationContext.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1045">
+          <caret line="55" column="46" selection-start-line="55" selection-start-column="46" selection-end-line="55" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/CommentEntity.hbm.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="312">
+          <caret line="20" column="19" lean-forward="true" selection-start-line="20" selection-start-column="19" selection-end-line="20" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/CommentEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/ContinentEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/ContinentEntity.hbm.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="354">
+          <caret line="20" column="20" lean-forward="true" selection-start-line="20" selection-start-column="20" selection-end-line="20" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/UserEntity.hbm.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="394">
+          <caret line="23" column="20" lean-forward="true" selection-start-line="23" selection-start-column="20" selection-end-line="23" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controller/SpotController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="10" column="43" selection-start-line="10" selection-start-column="43" selection-end-line="10" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/controller/BaseController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="74">
-          <caret line="79" column="24" lean-forward="true" selection-start-line="79" selection-start-column="24" selection-end-line="79" selection-end-column="24" />
+        <state relative-caret-position="171">
+          <caret line="44" column="34" lean-forward="true" selection-start-line="44" selection-start-column="34" selection-end-line="44" selection-end-column="34" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DAO/Impl/BaseDAOImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="331">
+          <caret line="49" column="27" selection-start-line="49" selection-start-column="27" selection-end-line="49" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/UserEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="69" column="15" selection-start-line="69" selection-start-column="15" selection-end-line="69" selection-end-column="15" />
         </state>
       </provider>
     </entry>
@@ -888,7 +893,7 @@
       <state key="ArtifactsStructureConfigurable.UI">
         <settings>
           <artifact-editor />
-          <last-edited>outdoors:war exploded2</last-edited>
+          <last-edited />
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -901,7 +906,7 @@
       </state>
       <state key="FacetStructureConfigurable.UI">
         <settings>
-          <last-edited>Hibernate (outdoors)|Hibernate</last-edited>
+          <last-edited />
           <splitter-proportions>
             <option name="proportions">
               <list>

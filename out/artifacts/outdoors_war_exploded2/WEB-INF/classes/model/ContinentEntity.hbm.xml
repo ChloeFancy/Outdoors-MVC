@@ -11,8 +11,11 @@
         <property name="name">
             <column name="name" sql-type="char(6)" length="6"/>
         </property>
-        <property name="discription">
-            <column name="discription" sql-type="text" not-null="true"/>
+        <property name="description">
+            <column name="description" sql-type="text" not-null="true"/>
+        </property>
+        <property name="photoPath">
+            <column name="photoPath" sql-type="varchar(50)" length="50" not-null="true"/>
         </property>
     </class>
 </hibernate-mapping>

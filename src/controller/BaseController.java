@@ -34,7 +34,7 @@ public abstract class BaseController<T> {
         return response;
     }
 
-    @RequestMapping(value="/login",method = {RequestMethod.GET})
+    @RequestMapping(value="/login",method = {RequestMethod.POST})
     public @ResponseBody
     BasicResponse login(T t, HttpServletRequest request) {
         BasicResponse response = new BasicResponse();

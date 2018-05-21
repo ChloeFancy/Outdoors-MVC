@@ -23,7 +23,7 @@ public class UserEntity {
     }
 
     @Basic
-    @Column(name = "name", nullable = false, length = 20)
+    @Column(name = "name", nullable = true, length = 20)
     public String getName() {
         return name;
     }
@@ -33,7 +33,7 @@ public class UserEntity {
     }
 
     @Basic
-    @Column(name = "mail", nullable = false, length = 20)
+    @Column(name = "mail", nullable = true, length = 20)
     public String getMail() {
         return mail;
     }
@@ -68,9 +68,9 @@ public class UserEntity {
         if (o == null || getClass() != o.getClass()) return false;
         UserEntity that = (UserEntity) o;
         return
-            (Objects.equals(mail, that.mail) ||
-                Objects.equals(tel, that.tel))&&
-                    Objects.equals(password, that.password);
+                (Objects.equals(mail, that.mail) ||
+                Objects.equals(tel, that.tel)) &&
+                Objects.equals(password, that.password);
     }
 
     @Override
