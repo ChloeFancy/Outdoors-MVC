@@ -8,7 +8,7 @@ import java.util.Objects;
 public class CountryEntity {
     private int id;
     private String name;
-    private String discription;
+    private String description;
     private String photoPath;
 
     @Id
@@ -32,13 +32,13 @@ public class CountryEntity {
     }
 
     @Basic
-    @Column(name = "discription", nullable = true, length = -1)
-    public String getDiscription() {
-        return discription;
+    @Column(name = "description", nullable = true, length = -1)
+    public String getDescription() {
+        return description;
     }
 
-    public void setDiscription(String discription) {
-        this.discription = discription;
+    public void setDescription(String description) {
+        this.description = description;
     }
 
     @Basic
@@ -58,13 +58,13 @@ public class CountryEntity {
         CountryEntity that = (CountryEntity) o;
         return id == that.id &&
                 Objects.equals(name, that.name) &&
-                Objects.equals(discription, that.discription) &&
+                Objects.equals(description, that.description) &&
                 Objects.equals(photoPath, that.photoPath);
     }
 
     @Override
     public int hashCode() {
 
-        return Objects.hash(id, name, discription, photoPath);
+        return Objects.hash(id, name, description, photoPath);
     }
 }
