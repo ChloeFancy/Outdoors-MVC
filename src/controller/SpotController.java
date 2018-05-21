@@ -1,14 +1,13 @@
 package controller;
 
-import model.CommentEntity;
+import model.SpotEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-
 @Controller
-@RequestMapping("/comment")
+@RequestMapping("/spot")
 @CrossOrigin("http://localhost:8081")
-public class CommentController extends BaseController<CommentEntity>{
+public class SpotController extends BaseController<SpotEntity> {
 
 }
