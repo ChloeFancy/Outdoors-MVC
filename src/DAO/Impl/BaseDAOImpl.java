@@ -101,6 +101,7 @@ public class BaseDAOImpl<T> implements BaseDAO<T> {
 
         for(int j=0 ; j<field.length; j++) { //遍历所有属性
             String name = field[j].getName(); //获取属性的名字
+            System.out.println("name:"+name);
             String get = "get";
             if(name.equals("id")){
                 //跳过id
@@ -109,6 +110,7 @@ public class BaseDAOImpl<T> implements BaseDAO<T> {
             if(name.charAt(1)>='a'&&name.charAt(1)<='z'){
                 get+=name.substring(0,1).toUpperCase()+name.substring(1);
             }
+            System.out.println(get);
             Method m = t.getClass().getMethod(get);
             String value = ""+ m.invoke(t);
             if(!value.equals("null")){
@@ -117,10 +119,10 @@ public class BaseDAOImpl<T> implements BaseDAO<T> {
                 }
                 hql.append("a."+name+"='"+value + "'&");
             }
-//            System.out.println(hql);
+            //System.out.println(hql);
         }
 
-//        System.out.println(hql.substring(0,hql.length()-1).replace("&"," and "));
+        System.out.println(hql.substring(0,hql.length()-1).replace("&"," and "));
         Query query = s.createQuery(hql.substring(0,hql.length()-1).replace("&"," and "));
 
         List list = query.list();

@@ -13,7 +13,7 @@ public class UserController extends BaseController<UserEntity>{
 
 
     //备注：子类中的requestMapping不能和父类重名
-//    @RequestMapping(value="/findAll",method = {RequestMethod.GET})
+//    @RequestMapping(value="/findAll",method = {Req uestMethod.GET})
 //    public @ResponseBody
 //    BasicResponse findAll(HttpServletRequest request) {
 //        BasicResponse response = new BasicResponse();

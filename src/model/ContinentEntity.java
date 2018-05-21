@@ -33,11 +33,11 @@ public class ContinentEntity {
 
     @Basic
     @Column(name = "description", nullable = true, length = -1)
-    public String getdescription() {
+    public String getDescription() {
         return description;
     }
 
-    public void setdescription(String description) {
+    public void setDescription(String description) {
         this.description = description;
     }
 
