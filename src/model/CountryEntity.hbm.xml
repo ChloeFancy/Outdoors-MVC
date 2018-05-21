@@ -11,6 +11,9 @@
         <property name="name">
             <column name="name" sql-type="char(20)" length="20"/>
         </property>
+        <property name="idContinent">
+            <column name="id_continent" sql-type="int(11)" not-null="true"/>
+        </property>
         <property name="description">
             <column name="description" sql-type="text" not-null="true"/>
         </property>

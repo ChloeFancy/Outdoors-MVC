@@ -1,13 +1,13 @@
 package controller;
 
-import model.CommentEntity;
+import model.CountryEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-@RequestMapping("/comment")
+@RequestMapping("/country")
 @CrossOrigin("http://localhost:8081")
-public class CommentController extends BaseController<CommentEntity>{
+public class CountryController extends BaseController<CountryEntity>{
 
 }

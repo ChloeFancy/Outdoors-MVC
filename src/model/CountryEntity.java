@@ -8,6 +8,7 @@ import java.util.Objects;
 public class CountryEntity {
     private int id;
     private String name;
+    private Integer idContinent;
     private String description;
     private String photoPath;
 
@@ -29,6 +30,16 @@ public class CountryEntity {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    @Basic
+    @Column(name = "id_continent", nullable = true)
+    public Integer getIdContinent() {
+        return idContinent;
+    }
+
+    public void setIdContinent(Integer idContinent) {
+        this.idContinent = idContinent;
     }
 
     @Basic
@@ -58,6 +69,7 @@ public class CountryEntity {
         CountryEntity that = (CountryEntity) o;
         return id == that.id &&
                 Objects.equals(name, that.name) &&
+                Objects.equals(idContinent, that.idContinent) &&
                 Objects.equals(description, that.description) &&
                 Objects.equals(photoPath, that.photoPath);
     }
@@ -65,6 +77,6 @@ public class CountryEntity {
     @Override
     public int hashCode() {
 
-        return Objects.hash(id, name, description, photoPath);
+        return Objects.hash(id, name, idContinent, description, photoPath);
     }
 }
