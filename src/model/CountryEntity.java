@@ -8,8 +8,8 @@ import java.util.Objects;
 public class CountryEntity {
     private int id;
     private String name;
-    private Integer idContinent;
-    private String discription;
+    private String description;
+    private String photoPath;
 
     @Id
     @Column(name = "id", nullable = false)
@@ -32,23 +32,23 @@ public class CountryEntity {
     }
 
     @Basic
-    @Column(name = "id_continent", nullable = true)
-    public Integer getIdContinent() {
-        return idContinent;
+    @Column(name = "description", nullable = true, length = -1)
+    public String getdescription() {
+        return description;
     }
 
-    public void setIdContinent(Integer idContinent) {
-        this.idContinent = idContinent;
+    public void setdescription(String description) {
+        this.description = description;
     }
 
     @Basic
-    @Column(name = "discription", nullable = true, length = -1)
-    public String getDiscription() {
-        return discription;
+    @Column(name = "photoPath", nullable = true, length = 50)
+    public String getPhotoPath() {
+        return photoPath;
     }
 
-    public void setDiscription(String discription) {
-        this.discription = discription;
+    public void setPhotoPath(String photoPath) {
+        this.photoPath = photoPath;
     }
 
     @Override
@@ -58,13 +58,13 @@ public class CountryEntity {
         CountryEntity that = (CountryEntity) o;
         return id == that.id &&
                 Objects.equals(name, that.name) &&
-                Objects.equals(idContinent, that.idContinent) &&
-                Objects.equals(discription, that.discription);
+                Objects.equals(description, that.description) &&
+                Objects.equals(photoPath, that.photoPath);
     }
 
     @Override
     public int hashCode() {
 
-        return Objects.hash(id, name, idContinent, discription);
+        return Objects.hash(id, name, description, photoPath);
     }
 }
