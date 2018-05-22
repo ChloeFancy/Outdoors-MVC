@@ -18,10 +18,10 @@
             <column name="tel" sql-type="char(11)" length="11"/>
         </property>
         <property name="password">
-            <column name="password" sql-type="char(32)" length="32"/>
+            <column name="password" sql-type="char(32)" length="32" not-null="true"/>
         </property>
         <property name="photoPath">
-            <column name="photoPath" sql-type="varchar(50)" length="50"/>
+            <column name="photoPath" sql-type="varchar(50)" length="50" />
         </property>
     </class>
 </hibernate-mapping>
