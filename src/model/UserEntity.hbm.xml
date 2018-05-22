@@ -6,7 +6,7 @@
 
     <class name="model.UserEntity" table="user" schema="outdoors">
         <id name="id">
-            <column name="id" sql-type="int(11)" not-null="true"/>
+            <column name="id" sql-type="int(11)"/>
         </id>
         <property name="name">
             <column name="name" sql-type="varchar(20)" length="20" not-null="false"/>
@@ -18,7 +18,10 @@
             <column name="tel" sql-type="char(11)" length="11" not-null="false"/>
         </property>
         <property name="password">
-            <column name="password" sql-type="char(32)" length="32" not-null="true"/>
+            <column name="password" sql-type="char(32)" length="32"/>
+        </property>
+        <property name="photoPath">
+            <column name="photoPath" sql-type="varchar(50)" length="50" not-null="false"/>
         </property>
     </class>
 </hibernate-mapping>

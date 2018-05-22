@@ -6,5 +6,5 @@ import util.BasicResponse;
 
 public interface UserDAO {
     JSONArray findAllUser();
-    void login(UserEntity userEntity, BasicResponse basicResponse);
+    UserEntity login(UserEntity userEntity);
 }

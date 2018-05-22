@@ -1,12 +1,14 @@
 package controller;
 
 import DAO.Impl.BaseDAOImpl;
+import com.alibaba.fastjson.JSONObject;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import util.BasicResponse;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
+import util.JWT;
 
 import javax.servlet.http.HttpServletRequest;
 import java.lang.reflect.Method;
@@ -34,29 +36,32 @@ public abstract class BaseController<T> {
         return response;
     }
 
-    @RequestMapping(value="/login",method = {RequestMethod.POST})
-    public @ResponseBody
-    BasicResponse login(T t, HttpServletRequest request) {
-        BasicResponse response = new BasicResponse();
-        response.setResCode("-1");
-        response.setResMsg("Error");
-        try{
-            BaseDAOImpl<T> baseDAO = new BaseDAOImpl<>();
-            T result = baseDAO.findOne(t);
-            if(result!=null){
-                Method m = t.getClass().getMethod("getId");
-                String value = m.invoke(t).toString();
-                request.getSession().setAttribute("session_id",value);
-
-                response.setResCode("1");
-                response.setResMsg("success");
-            }
-            return response;
-        }catch(Exception ex){
-            ex.printStackTrace();
-        }
-        return response;
-    }
+//    @RequestMapping(value="/login",method = {RequestMethod.POST})
+//    public @ResponseBody
+//    BasicResponse login(T t, HttpServletRequest request) {
+//        BasicResponse response = new BasicResponse();
+//        response.setResCode("-1");
+//        response.setResMsg("Error");
+//        try{
+//            BaseDAOImpl<T> baseDAO = new BaseDAOImpl<>();
+//            T result = baseDAO.findOne(t);
+//            if(result!=null){
+//                //生成用户登录的token标记登录状态
+//                String token = JWT.sign(t, 30L * 24L * 3600L * 1000L);
+//                if (token != null) {
+//                    JSONObject tokenObj = new JSONObject();
+//                    tokenObj.put("token",token);
+//                    response.setData(tokenObj);
+//                }
+//                response.setResCode("1");
+//                response.setResMsg("success");
+//            }
+//            return response;
+//        }catch(Exception ex){
+//            ex.printStackTrace();
+//        }
+//        return response;
+//    }
 
     @RequestMapping(value="/logout",method = {RequestMethod.GET})
     public @ResponseBody

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hibernate-configuration>
+    <session-factory>
+        <!-- Database connection settings -->
+        <property name = "connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name = "connection.url">jdbc:mysql://118.25.108.103:3306/outdoors</property>
+        <property name="hibernate.connection.username">root</property>
+        <property name="connection.password">123456ok+CE</property>
+        <!-- JDBC connection pool (use the built-in) -->
+        <!--
+        <property name="connection.pool_size">1</property>
+         -->
+        <!-- SQL dialect -->
+        <property name = "dialect">org.hibernate.dialect.MySQL5Dialect</property>
+        <!-- Enable Hibernate's automatic session context management -->
+        <property name = "current_session_context_class">thread</property>
+        <!-- Echo all executed SQL to stdout -->
+        <property name = "show_sql">true</property>
+        <!-- Drop and re-create the database schema on startup -->
+        <!--
+        <property name="hbm2ddl.auto">update</property>
+        -->
+
+        <property name="hibernate.c3p0.max_size">100</property>
+
+        <mapping resource="model/CommentEntity.hbm.xml"/>
+        <mapping class="model.CommentEntity"/>
+        <mapping class="model.ContinentEntity"/>
+        <mapping resource="model/ContinentEntity.hbm.xml"/>
+        <mapping class="model.ManagerEntity"/>
+        <mapping resource="model/ManagerEntity.hbm.xml"/>
+        <mapping class="model.SpotEntity"/>
+        <mapping resource="model/SpotEntity.hbm.xml"/>
+        <mapping class="model.StrategyEntity"/>
+        <mapping resource="model/StrategyEntity.hbm.xml"/>
+        <mapping resource="model/TagEntity.hbm.xml"/>
+        <mapping class="model.TagEntity"/>
+        <mapping resource="model/UserEntity.hbm.xml"/>
+        <mapping class="model.UserEntity"/>
+        <mapping class="model.CountryEntity"/>
+        <mapping resource="model/CountryEntity.hbm.xml"/>
+        <mapping resource="model/FollowEntity.hbm.xml"/>
+        <mapping class="model.FollowEntity"/>
+        <mapping class="model.BrowseEntity"/>
+        <mapping resource="model/BrowseEntity.hbm.xml"/>
+        <mapping class="model.RecommendEntity"/>
+        <mapping resource="model/RecommendEntity.hbm.xml"/>
+    </session-factory>
+</hibernate-configuration>

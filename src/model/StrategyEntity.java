@@ -11,6 +11,7 @@ public class StrategyEntity {
     private Integer idSpot;
     private String content;
     private String photoPath;
+    private String title;
 
     @Id
     @Column(name = "id", nullable = false)
@@ -62,6 +63,16 @@ public class StrategyEntity {
         this.photoPath = photoPath;
     }
 
+    @Basic
+    @Column(name = "title", nullable = true, length = 50)
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -71,12 +82,13 @@ public class StrategyEntity {
                 Objects.equals(idWriter, that.idWriter) &&
                 Objects.equals(idSpot, that.idSpot) &&
                 Objects.equals(content, that.content) &&
-                Objects.equals(photoPath, that.photoPath);
+                Objects.equals(photoPath, that.photoPath) &&
+                Objects.equals(title, that.title);
     }
 
     @Override
     public int hashCode() {
 
-        return Objects.hash(id, idWriter, idSpot, content, photoPath);
+        return Objects.hash(id, idWriter, idSpot, content, photoPath, title);
     }
 }

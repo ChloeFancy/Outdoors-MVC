@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                        http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+                        http://www.springframework.org/schema/mvc
+                        http://www.springframework.org/schema/mvc/spring-mvc-4.0.xsd
+                        http://www.springframework.org/schema/context
+                        http://www.springframework.org/schema/context/spring-context-4.0.xsd
+                        http://www.springframework.org/schema/aop
+                        http://www.springframework.org/schema/aop/spring-aop-4.0.xsd
+                        http://www.springframework.org/schema/tx
+                        http://www.springframework.org/schema/tx/spring-tx-4.0.xsd">
+
+
+    <bean id="dataSource" class="org.apache.commons.dbcp2.BasicDataSource" destroy-method="close">
+        <property name="driverClassName" value="com.mysql.jdbc.Driver"></property>
+        <property name="url" value="jdbc:mysql://118.25.108.103:3306/outdoors"></property>
+        <property name="username" value="root"/>
+        <property name="password" value="123456ok+CE"/>
+    </bean>
+
+
+    <tx:annotation-driven transaction-manager="txManager" proxy-target-class="true" />
+    <!-- session factory -->
+    <bean id="sessionFactory" class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
+        <property name="dataSource" ref="dataSource"></property>
+        <property name="hibernateProperties">
+            <props>
+                <prop key="hibernate.dialect">org.hibernate.dialect.MySQLDialect</prop>
+                <prop key="hibernate.show_sql">true</prop>
+                <prop key="hibernate.connection.url">jdbc:mysql://118.25.108.103:3306/outdoors</prop>
+                <prop key="hibernate.connection.driver_class">com.mysql.jdbc.Driver</prop>
+            </props>
+        </property>
+        <property name="annotatedClasses">
+            <list>
+                <value>model.CommentEntity</value>
+                <value>model.ContinentEntity</value>
+                <value>model.ManagerEntity</value>
+                <value>model.SpotEntity</value>
+                <value>model.StrategyEntity</value>
+                <value>model.TagEntity</value>
+                <value>model.UserEntity</value>
+                <value>model.CountryEntity</value>
+                <value>model.FollowEntity</value>
+            </list>
+        </property>
+        <property name="mappingLocations">
+            <list>
+                <value>classpath:model/CommentEntity.hbm.xml</value>
+                <value>classpath:model/ContinentEntity.hbm.xml</value>
+                <value>classpath:model/ManagerEntity.hbm.xml</value>
+                <value>classpath:model/SpotEntity.hbm.xml</value>
+                <value>classpath:model/StrategyEntity.hbm.xml</value>
+                <value>classpath:model/TagEntity.hbm.xml</value>
+                <value>classpath:model/UserEntity.hbm.xml</value>
+                <value>classpath:model/CommentEntity.hbm.xml</value>
+                <value>classpath:model/CountryEntity.hbm.xml</value>
+                <value>classpath:model/FollowEntity.hbm.xml</value>
+                <value>classpath:model/SpotEntity.hbm.xml</value>
+                <value>classpath:model/TagEntity.hbm.xml</value>
+            </list>
+        </property>
+    </bean>
+
+    <bean id="txManager" class="org.springframework.orm.jpa.JpaTransactionManager">
+        <property name="entityManagerFactory" ref="sessionFactory" />
+    </bean>
+
+    <!--要用到的bean的配置-->
+
+    <bean id="BaseDaoImpl" class="DAO.Impl.BaseDAOImpl">
+        <property name="sessionFactory" ref="sessionFactory"></property>
+    </bean>
+
+    <mvc:interceptors>
+        <mvc:interceptor>
+            <mvc:mapping path="/**" />
+            <bean class="Intercepter.Intercepter">
+                <property name="excludedUrls">
+                    <list>
+                        <value>/</value>
+                    </list>
+                </property>
+            </bean>
+        </mvc:interceptor>
+    </mvc:interceptors>
+
+    <tx:annotation-driven transaction-manager="txManager" proxy-target-class="true" />
+
+    <!-- 使用注解的依赖注入（DI）管理 -->
+    <context:annotation-config/>
+
+    <!-- 告诉Spring不用管理@controller标记的类 -->
+    <context:component-scan base-package="controller">
+        <context:exclude-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
+    </context:component-scan>
+</beans>

@@ -14,6 +14,7 @@
           <element id="library" level="project" name="mysql:mysql-connector-java:5.1.26" />
           <element id="library" level="project" name="com.fasterxml.jackson.core:jackson-databind:2.7.4" />
           <element id="library" level="project" name="com.alibaba:fastjson:1.2.47" />
+          <element id="library" level="project" name="com.auth0:java-jwt:2.2.0" />
         </element>
       </element>
     </root>

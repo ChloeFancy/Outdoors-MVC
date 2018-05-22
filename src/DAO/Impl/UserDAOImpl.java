@@ -26,7 +26,7 @@ public class UserDAOImpl implements UserDAO {
         Session s = sessionFactory.openSession();
         Transaction tx = s.beginTransaction();
 
-        String hql = "select u from UserEntity u as user";
+        String hql = "select u from UserEntity u";
         Query query= s.createQuery(hql);
         List<Object[]> list = query.list();
         List<JSONObject> resultList = new ArrayList<>();
@@ -44,7 +44,7 @@ public class UserDAOImpl implements UserDAO {
     }
 
     @Override
-    public void login(UserEntity userEntity, BasicResponse basicResponse) {
+    public UserEntity login(UserEntity userEntity) {
         String tel = userEntity.getTel();
         String mail = userEntity.getMail();
         String password = userEntity.getPassword();
@@ -52,12 +52,20 @@ public class UserDAOImpl implements UserDAO {
         Session s = sessionFactory.openSession();
         Transaction tx = s.beginTransaction();
 
+        String hql = "";
         if(tel!=null){
             //手机登录
-
-
+            hql = "select u from UserEntity u where u.tel="+tel+" and u.password = "+password;
         }else if(mail!=null){
             //邮件登录
+            hql = "select u from UserEntity u where u.mail="+mail+" and u.password = "+password;
+        }
+        Query query= s.createQuery(hql);
+        List list = query.list();
+        if(list.size()>0){
+            return (UserEntity)list.get(0);
+        }else{
+            return null;
         }
     }
 }
