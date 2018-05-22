@@ -24,6 +24,7 @@ create table user
 	mail varchar(20) not null,
 	tel char(11),
 	password char(32) not null
+	photoPath varchar(50),
 );
 alter table user AUTO_INCREMENT=10001;
 
@@ -79,6 +80,7 @@ create table strategy
 	id int AUTO_INCREMENT not null primary key,
 	id_writer int,
 	id_spot int,
+	title varchar(50),
 	content text,
 	photoPath varchar(50),
 	foreign key(id_writer) references user(id),
@@ -109,3 +111,26 @@ create table comment
 	foreign key(id_strategy) references strategy(id)
 );
 alter table comment AUTO_INCREMENT=10001;
+
+-- 浏览表
+create table browse
+(
+	id int AUTO_INCREMENT not null primary key,
+	id_user int,
+	id_spot int,
+	count int default 1,
+	foreign key(id_user) references user(id),
+	foreign key(id_spot) references spot(id)
+);
+alter table browse AUTO_INCREMENT=10001;
+
+-- 推荐表
+create table recommend
+(
+	id int AUTO_INCREMENT not null primary key,
+	id_user int,
+	id_spot int,
+	foreign key(id_user) references user(id),
+	foreign key(id_spot) references spot(id)
+);
+alter table recommend AUTO_INCREMENT=10001;

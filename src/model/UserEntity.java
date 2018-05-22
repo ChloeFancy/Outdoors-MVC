@@ -80,8 +80,8 @@ public class UserEntity {
         UserEntity that = (UserEntity) o;
         return
                 (Objects.equals(mail, that.mail) ||
-                Objects.equals(tel, that.tel)) &&
-                Objects.equals(password, that.password);
+                        Objects.equals(tel, that.tel)) &&
+                        Objects.equals(password, that.password);
     }
 
     @Override

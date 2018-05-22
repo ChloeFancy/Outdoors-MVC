@@ -1,15 +1,9 @@
 package DAO.Impl;
 
-import DAO.BaseDAO;
 import DAO.FollowDAO;
 import model.FollowEntity;
 import model.UserEntity;
-import org.hibernate.Session;
-import org.hibernate.Transaction;
-import org.hibernate.query.Query;
 
-import java.lang.reflect.Field;
-import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;

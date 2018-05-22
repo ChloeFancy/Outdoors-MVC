@@ -12,10 +12,10 @@
             <column name="name" sql-type="char(6)" length="6"/>
         </property>
         <property name="description">
-            <column name="description" sql-type="text" not-null="true"/>
+            <column name="description" sql-type="text"/>
         </property>
         <property name="photoPath">
-            <column name="photoPath" sql-type="varchar(50)" length="50" not-null="true"/>
+            <column name="photoPath" sql-type="varchar(50)" length="50"/>
         </property>
     </class>
 </hibernate-mapping>

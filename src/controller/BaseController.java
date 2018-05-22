@@ -185,7 +185,7 @@ public abstract class BaseController<T> {
 
     @RequestMapping(value="/findByQuery",method = {RequestMethod.GET})
     public @ResponseBody
-    BasicResponse findByQuery(T t) {
+    BasicResponse findByQuery(T t,HttpServletRequest request) {
         BasicResponse response = new BasicResponse();
         response.setResCode("-1");
         response.setResMsg("Error");
@@ -200,6 +200,13 @@ public abstract class BaseController<T> {
             response.setResMsg("Error");
             ex.printStackTrace();
         }
+        return response;
+    }
+    @RequestMapping(value="/test",method = {RequestMethod.GET})
+    public @ResponseBody
+    BasicResponse test(T t){
+        BasicResponse response = new BasicResponse();
+        response.setData(t);
         return response;
     }
 

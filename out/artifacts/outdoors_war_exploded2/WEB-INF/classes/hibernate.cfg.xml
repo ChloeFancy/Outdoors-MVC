@@ -39,9 +39,16 @@
         <mapping resource="model/CountryEntity.hbm.xml"/>
         <mapping resource="model/FollowEntity.hbm.xml"/>
         <mapping class="model.FollowEntity"/>
+<<<<<<< HEAD
         <mapping class="model.BrowseEntity"/>
         <mapping resource="model/BrowseEntity.hbm.xml"/>
         <mapping class="model.RecommendEntity"/>
         <mapping resource="model/RecommendEntity.hbm.xml"/>
+=======
+        <mapping resource="model/BrowseEntity.hbm.xml"/>
+        <mapping class="model.BrowseEntity"/>
+        <mapping resource="model/RecommendEntity.hbm.xml"/>
+        <mapping class="model.RecommendEntity"/>
+>>>>>>> 4e6eeb9b08802365bf1bd9c270bc03fc3823aa86
     </session-factory>
 </hibernate-configuration>
