@@ -2,6 +2,7 @@ package controller;
 
 
 import DAO.Impl.BaseDAOImpl;
+import DAO.Impl.UserDAOImpl;
 import model.UserEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
@@ -13,6 +14,7 @@ import javax.servlet.http.HttpServletRequest;
 @RequestMapping("/user")
 @CrossOrigin("http://localhost:8081")
 public class UserController extends BaseController<UserEntity>{
+    //修改密码
     @RequestMapping(value="/modifyPassword",method = {RequestMethod.GET})
     public @ResponseBody
     BasicResponse modifyPassWord(UserEntity userEntity,
@@ -30,7 +32,6 @@ public class UserController extends BaseController<UserEntity>{
                 //System.out.println("new:"+newPassword+confirmPassword);
                 dao.update(userEntity);
                 response.setData(userEntity);
-
                 response.setResCode("1");//修改成功
                 response.setResMsg("success");
                 return response;
@@ -41,12 +42,35 @@ public class UserController extends BaseController<UserEntity>{
                 return response;
             }
         }catch(Exception ex){
-            response.setResCode("-1");
-            response.setResMsg("Error");
             ex.printStackTrace();
         }
         return response;
     }
+
+    //注册
+    @RequestMapping(value="/logon",method = {RequestMethod.GET})
+    public @ResponseBody
+    BasicResponse modifyPassWord(UserEntity userEntity, HttpServletRequest request) {
+        BasicResponse response = new BasicResponse();
+        response.setResCode("-1");//用户已存在
+        response.setResMsg("Error");
+        UserDAOImpl dao = new UserDAOImpl();
+        try{
+            if(!dao.hasUser(userEntity)) {//如果没有出现过
+                dao.insert(userEntity);
+                response.setResCode("1");
+                response.setResMsg("Success");
+                response.setData(dao.findByQuery(userEntity).get(0));   
+                return response;
+            }
+
+        }catch(Exception ex){
+            response.setData(userEntity);
+            ex.printStackTrace();
+        }
+        return response;
+    }
+
 
     //备注：子类中的requestMapping不能和父类重名
 //    @RequestMapping(value="/findAll",method = {Req uestMethod.GET})

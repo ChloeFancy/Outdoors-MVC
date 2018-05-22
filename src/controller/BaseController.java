@@ -197,5 +197,12 @@ public abstract class BaseController<T> {
         }
         return response;
     }
+    @RequestMapping(value="/test",method = {RequestMethod.GET})
+    public @ResponseBody
+    BasicResponse test(T t){
+        BasicResponse response = new BasicResponse();
+        response.setData(t);
+        return response;
+    }
 
 }

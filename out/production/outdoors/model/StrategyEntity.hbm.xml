@@ -20,5 +20,8 @@
         <property name="photoPath">
             <column name="photoPath" sql-type="varchar(50)" length="50" not-null="true"/>
         </property>
+        <property name="title">
+            <column name="title" sql-type="varchar(50)" length="50" not-null="true"/>
+        </property>
     </class>
 </hibernate-mapping>

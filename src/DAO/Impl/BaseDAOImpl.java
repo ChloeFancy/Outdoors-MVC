@@ -24,6 +24,8 @@ public class BaseDAOImpl<T> implements BaseDAO<T> {
             Transaction tx = s.beginTransaction();
             s.save(t);
             tx.commit();
+            s.close();
+//            sessionFactory.close();
             return "success";
         }catch (Exception ex){
             ex.printStackTrace();

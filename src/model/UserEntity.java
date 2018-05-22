@@ -11,6 +11,7 @@ public class UserEntity {
     private String mail;
     private String tel;
     private String password;
+    private String photoPath;
 
     @Id
     @Column(name = "id", nullable = false)
@@ -62,6 +63,16 @@ public class UserEntity {
         this.password = password;
     }
 
+    @Basic
+    @Column(name = "photoPath", nullable = true, length = 50)
+    public String getPhotoPath() {
+        return photoPath;
+    }
+
+    public void setPhotoPath(String photoPath) {
+        this.photoPath = photoPath;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -69,13 +80,13 @@ public class UserEntity {
         UserEntity that = (UserEntity) o;
         return
                 (Objects.equals(mail, that.mail) ||
-                Objects.equals(tel, that.tel)) &&
-                Objects.equals(password, that.password);
+                        Objects.equals(tel, that.tel)) &&
+                        Objects.equals(password, that.password);
     }
 
     @Override
     public int hashCode() {
 
-        return Objects.hash(id, name, mail, tel, password);
+        return Objects.hash(id, name, mail, tel, password, photoPath);
     }
 }

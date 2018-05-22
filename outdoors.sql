@@ -24,6 +24,7 @@ create table user
 	mail varchar(20) not null,
 	tel char(11),
 	password char(32) not null
+	photoPath varchar(50),
 );
 alter table user AUTO_INCREMENT=10001;
 
@@ -79,6 +80,7 @@ create table strategy
 	id int AUTO_INCREMENT not null primary key,
 	id_writer int,
 	id_spot int,
+	title varchar(50),
 	content text,
 	photoPath varchar(50),
 	foreign key(id_writer) references user(id),
