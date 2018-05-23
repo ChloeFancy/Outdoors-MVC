@@ -11,8 +11,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import util.BasicResponse;
 import util.JWT;
+import util.unsignFromCookie;
 
-import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 
 @Controller
@@ -22,12 +22,13 @@ public class UserController extends BaseController<UserEntity>{
 
     @RequestMapping(value="/fuzzyQuery",method={RequestMethod.GET})
     public @ResponseBody
-    BasicResponse search(@RequestParam String keyword){
+    BasicResponse search(@RequestParam String keyword,HttpServletRequest request){
         BasicResponse response = new BasicResponse();
         response.setResCode("1");
         response.setResMsg("success");
         UserDAOImpl userDAO = new UserDAOImpl();
-        JSONArray jsonArray = userDAO.findUsersNameLike(keyword);
+        UserEntity userEntity = unsignFromCookie.unsign(request);
+        JSONArray jsonArray = userDAO.findUsersNameLike(userEntity,keyword);
         response.setData(jsonArray);
         if(jsonArray.size()<1){
             response.setResCode("-1");
@@ -47,17 +48,7 @@ public class UserController extends BaseController<UserEntity>{
         response.setResMsg("Error");
 
         //获取token，还原userEntity
-        UserEntity fromToken = null;
-        Cookie[] cookie = request.getCookies();
-        for (int i = 0; i < cookie.length; i++) {
-            Cookie cook = cookie[i];
-            System.out.println(cook.getName());
-            if(cook.getName().equalsIgnoreCase("usertoken")){ //获取键
-//                System.out.println(cook.getValue().toString());
-                fromToken = JWT.unsign(cook.getValue().toString(),UserEntity.class);
-//                System.out.println(JSON.toJSONString(fromToken));
-            }
-        }
+        UserEntity fromToken = unsignFromCookie.unsign(request);
         if(fromToken==null){
             //说明token已失效
             response.setResCode("-2");

@@ -57,14 +57,17 @@ public class UserDAOImpl extends BaseDAOImpl<UserEntity> implements UserDAO {
     }
 
     @Override
-    public JSONArray findUsersNameLike(String name) {
+    public JSONArray findUsersNameLike(UserEntity userEntity,String name) {
         Session s = sessionFactory.openSession();
         Transaction tx = s.beginTransaction();
 
-        String hql = "select u from UserEntity u where u.name like '%"+name+"%'";
+        int currentUser = userEntity.getId();
+
+        String hql = "select u from UserEntity u where u.name like '%"+name+"%' and u.id <> "+currentUser;
         Query query= s.createQuery(hql);
         List<UserEntity> list = query.list();
         List<JSONObject> resultList = new ArrayList<>();
+
         for (UserEntity object : list) {
 
             JSONObject json = new JSONObject();
@@ -72,6 +75,13 @@ public class UserDAOImpl extends BaseDAOImpl<UserEntity> implements UserDAO {
             json.put("name",object.getName());
             json.put("mail",object.getMail());
             json.put("tel",object.getMail());
+
+            String findFollow = "select f from FollowEntity f where f.idFollower = "+currentUser
+                    + " and f.idFollowed = "+object.getId();
+            Query query1 = s.createQuery(findFollow);
+            List<UserEntity> list1 = query1.list();
+            json.put("canBeFollowed",!(list1.size()>0));
+
             resultList.add(json);
         }
         return JSONArray.parseArray(JSON.toJSONString(resultList));

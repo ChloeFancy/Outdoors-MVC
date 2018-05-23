@@ -7,6 +7,6 @@ import util.BasicResponse;
 public interface UserDAO {
     //用户是否存在
     boolean hasUser(UserEntity userEntity) throws Exception;
-    JSONArray findUsersNameLike(String name);
+    JSONArray findUsersNameLike(UserEntity userEntity,String name);
     UserEntity login(UserEntity userEntity);
 }
