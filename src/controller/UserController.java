@@ -93,6 +93,7 @@ public class UserController extends BaseController<UserEntity>{
                 if (token != null) {
                     System.out.println(token);
                     JSONObject tokenObj = new JSONObject();
+                    tokenObj.put("userId",result.getId());
                     tokenObj.put("token",token);
                     response.setData(tokenObj);
                 }
@@ -109,12 +110,12 @@ public class UserController extends BaseController<UserEntity>{
     //验证用户是否处于登录状态
     @RequestMapping(value="/isLogin",method = {RequestMethod.POST})
     public @ResponseBody
-    BasicResponse isLogin(@RequestParam String token,HttpServletRequest request) {
+    BasicResponse isLogin(HttpServletRequest request) {
         BasicResponse response = new BasicResponse();
         response.setResCode("-1");
         response.setResMsg("Error");
         try{
-            UserEntity userEntity = JWT.unsign(token,UserEntity.class);
+            UserEntity userEntity = unsignFromCookie.unsign(request);
             if(userEntity!=null){
                 //仍处于登录状态
                 response.setResCode("1");
