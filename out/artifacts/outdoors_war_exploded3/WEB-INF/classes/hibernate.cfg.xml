@@ -41,9 +41,9 @@
         <mapping resource="model/CountryEntity.hbm.xml"/>
         <mapping resource="model/FollowEntity.hbm.xml"/>
         <mapping class="model.FollowEntity"/>
-        <mapping class="model.BrowseEntity"/>
         <mapping resource="model/BrowseEntity.hbm.xml"/>
-        <mapping class="model.RecommendEntity"/>
+        <mapping class="model.BrowseEntity"/>
         <mapping resource="model/RecommendEntity.hbm.xml"/>
+        <mapping class="model.RecommendEntity"/>
     </session-factory>
 </hibernate-configuration>

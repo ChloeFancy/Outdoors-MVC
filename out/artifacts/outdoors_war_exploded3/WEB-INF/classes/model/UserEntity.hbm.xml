@@ -9,13 +9,13 @@
             <column name="id" sql-type="int(11)"/>
         </id>
         <property name="name">
-            <column name="name" sql-type="varchar(20)" length="20" not-null="false"/>
+            <column name="name" sql-type="varchar(20)" length="20"/>
         </property>
         <property name="mail">
-            <column name="mail" sql-type="varchar(20)" length="20" not-null="false"/>
+            <column name="mail" sql-type="varchar(20)" length="20"/>
         </property>
         <property name="tel">
-            <column name="tel" sql-type="char(11)" length="11" not-null="false"/>
+            <column name="tel" sql-type="char(11)" length="11"/>
         </property>
         <property name="password">
             <column name="password" sql-type="char(32)" length="32"/>
@@ -23,5 +23,8 @@
         <property name="photoPath">
             <column name="photoPath" sql-type="varchar(50)" length="50" not-null="false"/>
         </property>
+        <!--<property name="photoPath">-->
+            <!--<column name="photoPath" sql-type="varchar(50)" length="50" />-->
+        <!--</property>-->
     </class>
 </hibernate-mapping>

@@ -21,11 +21,10 @@
             <column name="password" sql-type="char(32)" length="32"/>
         </property>
         <property name="photoPath">
-<<<<<<< HEAD
             <column name="photoPath" sql-type="varchar(50)" length="50" not-null="false"/>
-=======
-            <column name="photoPath" sql-type="varchar(50)" length="50"/>
->>>>>>> 4e6eeb9b08802365bf1bd9c270bc03fc3823aa86
         </property>
+        <!--<property name="photoPath">-->
+            <!--<column name="photoPath" sql-type="varchar(50)" length="50" />-->
+        <!--</property>-->
     </class>
 </hibernate-mapping>

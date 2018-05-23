@@ -3,11 +3,8 @@ package controller;
 
 import DAO.Impl.BaseDAOImpl;
 import DAO.Impl.UserDAOImpl;
-<<<<<<< HEAD
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
-=======
->>>>>>> 4e6eeb9b08802365bf1bd9c270bc03fc3823aa86
 import model.UserEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
@@ -21,12 +18,19 @@ import javax.servlet.http.HttpServletRequest;
 @RequestMapping("/user")
 @CrossOrigin("http://localhost:8081")
 public class UserController extends BaseController<UserEntity>{
-<<<<<<< HEAD
+
+    @RequestMapping(value="/search",method={RequestMethod.GET})
+    public @ResponseBody
+    BasicResponse search(@RequestParam String name){
+        BasicResponse response = new BasicResponse();
+        response.setResCode("-1");//用户密码不一致
+        response.setResMsg("Error");
+        UserDAOImpl userDAO = new UserDAOImpl();
+        response.setData(userDAO.findUsersNameLike(name));
+        return response;
+    }
+
     @RequestMapping(value="/modifyPassword",method = {RequestMethod.POST})
-=======
-    //修改密码
-    @RequestMapping(value="/modifyPassword",method = {RequestMethod.GET})
->>>>>>> 4e6eeb9b08802365bf1bd9c270bc03fc3823aa86
     public @ResponseBody
     BasicResponse modifyPassWord(@RequestParam String oldPassword,
                                  @RequestParam String newPassword,
@@ -44,7 +48,6 @@ public class UserController extends BaseController<UserEntity>{
             System.out.println(cook.getName());
             if(cook.getName().equalsIgnoreCase("usertoken")){ //获取键
 //                System.out.println(cook.getValue().toString());
-
                 fromToken = JWT.unsign(cook.getValue().toString(),UserEntity.class);
 //                System.out.println(JSON.toJSONString(fromToken));
             }
@@ -63,29 +66,11 @@ public class UserController extends BaseController<UserEntity>{
         //如果未失效且旧密码正确
         BaseDAOImpl<UserEntity> dao = new BaseDAOImpl<>();
         try{
-<<<<<<< HEAD
             fromToken.setPassword(newPassword);
             dao.update(fromToken);
             response.setResCode("1");//修改成功
             response.setResMsg("success");
             return response;
-//            response.setData(userEntity=dao.findOne(userEntity));
-//            if(newPassword.equals(confirmPassword)) {
-//                request.setCharacterEncoding("utf-8");
-//                userEntity.setPassword(newPassword);
-//                //System.out.println("new:"+newPassword+confirmPassword);
-//                dao.update(userEntity);
-//                response.setData(userEntity);
-//
-//                response.setResCode("1");//修改成功
-//                response.setResMsg("success");
-//                return response;
-//            }
-//            else {
-//                response.setResCode("-2");//两次密码不一致
-//                response.setResMsg("error");
-//                return response;
-//            }
         }catch(Exception ex){
             response.setResCode("-1");
             response.setResMsg("Error");
@@ -115,16 +100,6 @@ public class UserController extends BaseController<UserEntity>{
                     response.setData(tokenObj);
                 }
                 response.setResCode("1");
-=======
-            response.setData(userEntity=dao.findOne(userEntity));
-            if(newPassword.equals(confirmPassword)) {
-                request.setCharacterEncoding("utf-8");
-                userEntity.setPassword(newPassword);
-                //System.out.println("new:"+newPassword+confirmPassword);
-                dao.update(userEntity);
-                response.setData(userEntity);
-                response.setResCode("1");//修改成功
->>>>>>> 4e6eeb9b08802365bf1bd9c270bc03fc3823aa86
                 response.setResMsg("success");
             }
             return response;
@@ -134,7 +109,6 @@ public class UserController extends BaseController<UserEntity>{
         return response;
     }
 
-<<<<<<< HEAD
     //验证用户是否处于登录状态
     @RequestMapping(value="/isLogin",method = {RequestMethod.POST})
     public @ResponseBody
@@ -155,11 +129,11 @@ public class UserController extends BaseController<UserEntity>{
         }
         return null;
     }
-=======
+
     //注册
     @RequestMapping(value="/logon",method = {RequestMethod.GET})
     public @ResponseBody
-    BasicResponse modifyPassWord(UserEntity userEntity, HttpServletRequest request) {
+    BasicResponse logon(UserEntity userEntity, HttpServletRequest request) {
         BasicResponse response = new BasicResponse();
         response.setResCode("-1");//用户已存在
         response.setResMsg("Error");
@@ -199,7 +173,7 @@ public class UserController extends BaseController<UserEntity>{
 //        }
 //        return null;
 //    }
->>>>>>> 4e6eeb9b08802365bf1bd9c270bc03fc3823aa86
+//>>>>>>> 4e6eeb9b08802365bf1bd9c270bc03fc3823aa86
 
 //    备注：子类中的requestMapping不能和父类重名
 //    @RequestMapping(value="/login",method = {RequestMethod.GET})

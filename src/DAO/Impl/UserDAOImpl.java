@@ -57,22 +57,21 @@ public class UserDAOImpl extends BaseDAOImpl<UserEntity> implements UserDAO {
     }
 
     @Override
-    public JSONArray findAllUser() {
+    public JSONArray findUsersNameLike(String name) {
         Session s = sessionFactory.openSession();
         Transaction tx = s.beginTransaction();
 
-        String hql = "select u from UserEntity u";
+        String hql = "select u from UserEntity u where u.name like '%"+name+"%'";
         Query query= s.createQuery(hql);
-        List<Object[]> list = query.list();
+        List<UserEntity> list = query.list();
         List<JSONObject> resultList = new ArrayList<>();
-        for (Object[] object : list) {
+        for (UserEntity object : list) {
 
             JSONObject json = new JSONObject();
-            json.put("id",object[0]);
-            json.put("name",object[1]);
-            json.put("mail",object[2]);
-            json.put("password",object[3]);
-
+            json.put("id",object.getId());
+            json.put("name",object.getName());
+            json.put("mail",object.getMail());
+            json.put("tel",object.getMail());
             resultList.add(json);
         }
         return JSONArray.parseArray(JSON.toJSONString(resultList));

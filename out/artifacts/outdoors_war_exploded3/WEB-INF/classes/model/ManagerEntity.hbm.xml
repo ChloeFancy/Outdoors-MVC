@@ -12,7 +12,7 @@
             <column name="name" sql-type="varchar(20)" length="20"/>
         </property>
         <property name="password">
-            <column name="password" sql-type="varchar(32)" length="32"/>
+            <column name="password" sql-type="varchar(32)" length="32" not-null="true"/>
         </property>
     </class>
 </hibernate-mapping>

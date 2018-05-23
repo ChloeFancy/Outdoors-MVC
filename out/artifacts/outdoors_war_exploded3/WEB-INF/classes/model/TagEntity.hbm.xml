@@ -9,10 +9,10 @@
             <column name="id" sql-type="int(11)"/>
         </id>
         <property name="name">
-            <column name="name" sql-type="varchar(10)" length="10" not-null="true"/>
+            <column name="name" sql-type="varchar(10)" length="10" />
         </property>
         <property name="idStrategy">
-            <column name="id_strategy" sql-type="int(11)" not-null="true"/>
+            <column name="id_strategy" sql-type="int(11)" />
         </property>
     </class>
 </hibernate-mapping>
