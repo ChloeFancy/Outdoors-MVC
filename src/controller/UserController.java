@@ -4,6 +4,7 @@ package controller;
 import DAO.Impl.BaseDAOImpl;
 import DAO.Impl.UserDAOImpl;
 import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
 import model.UserEntity;
 import org.springframework.stereotype.Controller;
@@ -19,14 +20,19 @@ import javax.servlet.http.HttpServletRequest;
 @CrossOrigin("http://localhost:8081")
 public class UserController extends BaseController<UserEntity>{
 
-    @RequestMapping(value="/search",method={RequestMethod.GET})
+    @RequestMapping(value="/fuzzyQuery",method={RequestMethod.GET})
     public @ResponseBody
-    BasicResponse search(@RequestParam String name){
+    BasicResponse search(@RequestParam String keyword){
         BasicResponse response = new BasicResponse();
-        response.setResCode("-1");//用户密码不一致
-        response.setResMsg("Error");
+        response.setResCode("1");
+        response.setResMsg("success");
         UserDAOImpl userDAO = new UserDAOImpl();
-        response.setData(userDAO.findUsersNameLike(name));
+        JSONArray jsonArray = userDAO.findUsersNameLike(keyword);
+        response.setData(jsonArray);
+        if(jsonArray.size()<1){
+            response.setResCode("-1");
+            response.setResMsg("null");
+        }
         return response;
     }
 

@@ -23,19 +23,20 @@ public class StrategyDAOImpl implements StrategyDAO {
         Session s = sessionFactory.openSession();
         Transaction tx = s.beginTransaction();
 
-        String hql = "select u from StrategyEntity u where u.title like '%"+keyword+"%'";
+        String hql = "select u.id,u.name,s.title,s.content,s.idSpot from StrategyEntity s,UserEntity u where (s.title like '%"+keyword+"%' " +
+                "or s.content like '%\"+keyword+\"%' ) " +
+                "and u.id = s.idWriter";
         Query query= s.createQuery(hql);
-        List<StrategyEntity> list = query.list();
-        List<StrategyEntity> resultList = new ArrayList<>();
-        for (StrategyEntity object : list) {
-            resultList.add(object);
-        }
-
-        hql = "select u from StrategyEntity u where u.content like '%"+keyword+"%'";
-        query= s.createQuery(hql);
-        List<StrategyEntity> list_1 = query.list();
-        for (StrategyEntity object : list_1) {
-            resultList.add(object);
+        List<Object[]> list = query.list();
+        List<JSONObject> resultList = new ArrayList<>();
+        for (Object[] object : list) {
+            JSONObject jsonObject = new JSONObject();
+            jsonObject.put("writerId",object[0]);
+            jsonObject.put("writerName",object[1]);
+            jsonObject.put("title",object[2]);
+            jsonObject.put("content",object[3]);
+            jsonObject.put("idSpot",object[4]);
+            resultList.add(jsonObject);
         }
 
         return JSONArray.parseArray(JSON.toJSONString(resultList));
