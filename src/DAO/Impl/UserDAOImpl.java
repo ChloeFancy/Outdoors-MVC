@@ -5,6 +5,7 @@ import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
 import controller.BaseController;
+import model.SpotEntity;
 import model.UserEntity;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -74,7 +75,7 @@ public class UserDAOImpl extends BaseDAOImpl<UserEntity> implements UserDAO {
             json.put("id",object.getId());
             json.put("name",object.getName());
             json.put("mail",object.getMail());
-            json.put("tel",object.getMail());
+            json.put("tel",object.getTel());
 
             String findFollow = "select f from FollowEntity f where f.idFollower = "+currentUser
                     + " and f.idFollowed = "+object.getId();
