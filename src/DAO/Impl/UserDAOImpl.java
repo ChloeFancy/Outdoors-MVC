@@ -102,8 +102,6 @@ public class UserDAOImpl extends BaseDAOImpl<UserEntity> implements UserDAO {
                 resultList.add(json);
             }
         }
-
-
         return JSONArray.parseArray(JSON.toJSONString(resultList));
     }
 

@@ -16,7 +16,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class RecommendDAOImpl extends BaseDAOImpl<RecommendEntity> implements RecommendDAO {
-    private SessionFactory sessionFactory = new Configuration().configure().buildSessionFactory();
+
+    private SessionFactory sessionFactory;
 
     //获取推荐景点信息
     @Override
@@ -24,7 +25,7 @@ public class RecommendDAOImpl extends BaseDAOImpl<RecommendEntity> implements Re
         Session s = sessionFactory.openSession();
         Transaction tx = s.beginTransaction();
 
-        List<RecommendEntity> list=findByQuery(recommendEntity);
+        List<RecommendEntity> list = findByQuery(recommendEntity);
         List<SpotEntity> resultList = new ArrayList<>();
         List<SpotEntity> allSpotList;
 
@@ -64,5 +65,17 @@ public class RecommendDAOImpl extends BaseDAOImpl<RecommendEntity> implements Re
             }
         }
         return resultList;
+    }
+
+    @Override
+    public List<SpotEntity> getMostPopularSpots() throws Exception {
+
+
+        return null;
+    }
+
+    @Override
+    public void setSessionFactory(SessionFactory sessionFactory) {
+        this.sessionFactory = sessionFactory;
     }
 }

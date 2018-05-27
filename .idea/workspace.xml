@@ -10,14 +10,6 @@
       <change afterPath="$PROJECT_DIR$/../../../JavaEEExpemeriment5/src/messageResource_en _US.properties" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../../../JavaEEExpemeriment5/src/messageResource_temp.properties" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../../../JavaEEExpemeriment5/src/struts.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/outdoors_war_exploded2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/com_alibaba_fastjson_1_2_47.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/DAO/BaseDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/DAO/Impl/BaseDAOImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/DAO/Impl/RecommendDAOImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/DAO/RecommendDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/controller/BaseController.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../项目本体/Outdoors" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../../作业/7/.idea/artifacts/JavaEEExperiment7_war_exploded.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../../作业/7/.idea/dataSources.local.xml" afterDir="false" />
@@ -39,11 +31,17 @@
       <change afterPath="$PROJECT_DIR$/../../作业/7/src/model/XsbEntity.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../../作业/7/web/WEB-INF/applicationContext.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../../作业/7/web/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/outdoors/DAO/Impl/UserDAOImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/outdoors/controller/RecommendController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/outdoors/controller/UserController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/outdoors_war_exploded3/WEB-INF/classes/DAO/Impl/UserDAOImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/outdoors_war_exploded3/WEB-INF/classes/DAO/Impl/UserDAOImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/outdoors_war_exploded3/WEB-INF/classes/applicationContext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/outdoors_war_exploded3/WEB-INF/classes/applicationContext.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/outdoors_war_exploded3/WEB-INF/classes/controller/RecommendController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/outdoors_war_exploded3/WEB-INF/classes/controller/RecommendController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/outdoors/applicationContext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/outdoors/applicationContext.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DAO/Impl/RecommendDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DAO/Impl/RecommendDAOImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/DAO/Impl/UserDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DAO/Impl/UserDAOImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DAO/RecommendDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DAO/RecommendDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/applicationContext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/applicationContext.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controller/RecommendController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/RecommendController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/util/unsignFromCookie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/util/unsignFromCookie.java" afterDir="false" />
       <change beforePath="E:/Vue Programs/Vue-ToDo-App" beforeDir="false" afterPath="E:/Vue Programs/Vue-ToDo-App" afterDir="false" />
       <change beforePath="E:/gitTest-a/gitTest/1_3_2.html" beforeDir="false" afterPath="E:/gitTest-a/gitTest/1_3_2.html" afterDir="false" />
     </list>
@@ -71,20 +69,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="BaseDAO.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/DAO/BaseDAO.java">
+      <file leaf-file-name="RecommendController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/controller/RecommendController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
-              <caret line="9" column="37" selection-start-line="9" selection-start-column="37" selection-end-line="9" selection-end-column="37" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/controller/UserController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3211">
-              <caret line="187" selection-start-line="187" selection-end-line="187" />
+            <state relative-caret-position="760">
+              <caret line="40" lean-forward="true" selection-start-line="40" selection-end-line="40" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -92,47 +81,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RecommendController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/controller/RecommendController.java">
+      <file leaf-file-name="RecommendDAOImpl.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/DAO/Impl/RecommendDAOImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
-              <caret line="9" column="59" selection-start-line="9" selection-start-column="59" selection-end-line="9" selection-end-column="59" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BaseDAOImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/DAO/Impl/BaseDAOImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1083">
-              <caret line="72" selection-start-line="72" selection-end-line="72" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FollowDAOImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/DAO/Impl/FollowDAOImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1007">
-              <caret line="62" column="40" selection-start-line="62" selection-start-column="40" selection-end-line="62" selection-end-column="40" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserEntity.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/model/UserEntity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="266">
-              <caret line="15" column="7" selection-start-line="15" selection-start-column="7" selection-end-line="15" selection-end-column="7" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserDAOImpl.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/DAO/Impl/UserDAOImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="114">
-              <caret line="76" lean-forward="true" selection-start-line="76" selection-end-line="76" />
+            <state relative-caret-position="261">
+              <caret line="72" lean-forward="true" selection-start-line="72" selection-end-line="72" />
             </state>
           </provider>
         </entry>
@@ -171,7 +124,6 @@
         <option value="$PROJECT_DIR$/src/model/StrategyEntity.hbm.xml" />
         <option value="$PROJECT_DIR$/src/model/UserEntity.hbm.xml" />
         <option value="$PROJECT_DIR$/src/DAO/SpotDAO.java" />
-        <option value="$PROJECT_DIR$/src/util/unsignFromCookie.java" />
         <option value="$PROJECT_DIR$/src/DAO/UserDAO.java" />
         <option value="$PROJECT_DIR$/src/DAO/FollowDAO.java" />
         <option value="$PROJECT_DIR$/src/DAO/CommentDAO.java" />
@@ -187,13 +139,17 @@
         <option value="$PROJECT_DIR$/src/controller/StrategyController.java" />
         <option value="$PROJECT_DIR$/src/DAO/Impl/SpotDAOImpl.java" />
         <option value="$PROJECT_DIR$/src/DAO/Impl/StrategyDAOImpl.java" />
-        <option value="$PROJECT_DIR$/src/applicationContext.xml" />
         <option value="$PROJECT_DIR$/src/controller/BaseController.java" />
         <option value="$PROJECT_DIR$/src/DAO/Impl/BaseDAOImpl.java" />
         <option value="$PROJECT_DIR$/src/controller/FollowController.java" />
         <option value="$PROJECT_DIR$/src/DAO/Impl/FollowDAOImpl.java" />
         <option value="$PROJECT_DIR$/src/controller/UserController.java" />
         <option value="$PROJECT_DIR$/src/DAO/Impl/UserDAOImpl.java" />
+        <option value="$PROJECT_DIR$/src/applicationContext.xml" />
+        <option value="$PROJECT_DIR$/src/util/unsignFromCookie.java" />
+        <option value="$PROJECT_DIR$/src/DAO/RecommendDAO.java" />
+        <option value="$PROJECT_DIR$/src/DAO/Impl/RecommendDAOImpl.java" />
+        <option value="$PROJECT_DIR$/src/controller/RecommendController.java" />
       </list>
     </option>
   </component>
@@ -227,6 +183,8 @@
     </navigator>
     <panes>
       <pane id="AndroidView" />
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -238,12 +196,6 @@
               <item name="outdoors" type="b2602c69:ProjectViewProjectNode" />
               <item name="outdoors-05-17" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="outdoors" type="b2602c69:ProjectViewProjectNode" />
-              <item name="outdoors-05-17" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="outdoors" type="b2602c69:ProjectViewProjectNode" />
@@ -273,8 +225,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -485,12 +435,13 @@
       <workItem from="1527328695788" duration="1416000" />
       <workItem from="1527339804772" duration="5684000" />
       <workItem from="1527416890741" duration="11146000" />
-      <workItem from="1527429771808" duration="69000" />
+      <workItem from="1527429771808" duration="1947000" />
+      <workItem from="1527432107232" duration="173000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="92689000" />
+    <option name="totallyTimeSpent" value="94740000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -503,7 +454,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="Event Log" order="14" side_tool="true" />
@@ -518,7 +468,6 @@
       <window_info id="UI Designer" order="5" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.49462366" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3297491" />
-      <window_info active="true" anchor="bottom" id="Messages" order="10" visible="true" weight="0.14336918" />
       <window_info anchor="right" id="Palette&#9;" order="6" />
       <window_info id="Image Layers" order="4" />
       <window_info anchor="bottom" id="Java Enterprise" order="11" />
@@ -528,13 +477,14 @@
       <window_info anchor="bottom" id="Spring" order="8" />
       <window_info anchor="bottom" id="Terminal" order="9" weight="0.32616487" />
       <window_info id="Persistence" order="2" sideWeight="0.29338843" side_tool="true" weight="0.22231205" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.7072165" visible="true" weight="0.21180275" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.7072165" visible="true" weight="0.21503638" />
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="right" id="Theme Preview" order="7" />
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.14336918" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Find" order="1" />
@@ -552,20 +502,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/.idea/libraries/Hibernate_5_2_16_5_2_16.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="9" column="93" selection-start-line="9" selection-start-column="93" selection-end-line="9" selection-end-column="93" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/lib/spring-webmvc-4.3.16.RELEASE.jar!/org/springframework/web/servlet/mvc/method/annotation/RequestMappingHandlerMapping.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="32" column="13" selection-start-line="32" selection-start-column="13" selection-end-line="32" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Intercepter/Intercepter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1444">
@@ -700,13 +636,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/util/unsignFromCookie.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="7" column="29" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/DAO/StrategyDAO.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="133">
@@ -799,13 +728,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/DAO/Impl/CommentDAOImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-269">
-          <caret line="18" column="41" selection-start-line="18" selection-start-column="27" selection-end-line="18" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/DAO/Impl/SpotDAOImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="79">
@@ -817,13 +739,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="266">
           <caret line="29" column="14" lean-forward="true" selection-start-line="29" selection-start-column="14" selection-end-line="29" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/applicationContext.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2128">
-          <caret line="112" column="4" selection-start-line="112" selection-start-column="4" selection-end-line="112" selection-end-column="4" />
         </state>
       </provider>
     </entry>
@@ -855,20 +770,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller/FollowController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="122">
-          <caret line="28" selection-start-line="28" selection-end-line="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/UserEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="15" column="7" selection-start-line="15" selection-start-column="7" selection-end-line="15" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/DAO/Impl/FollowDAOImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1007">
@@ -880,23 +781,72 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3211">
           <caret line="187" selection-start-line="187" selection-end-line="187" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DAO/Impl/UserDAOImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1359">
+          <caret line="103" column="9" selection-start-line="103" selection-start-column="9" selection-end-line="103" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/UserEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="23" column="5" lean-forward="true" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controller/FollowController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="28" column="99" lean-forward="true" selection-start-line="24" selection-start-column="4" selection-end-line="28" selection-end-column="99" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DAO/Impl/CommentDAOImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="18" column="41" selection-start-line="18" selection-start-column="27" selection-end-line="18" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/applicationContext.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="235">
+          <caret line="112" lean-forward="true" selection-start-line="112" selection-end-line="112" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/util/unsignFromCookie.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="17" column="9" lean-forward="true" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DAO/RecommendDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controller/RecommendController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="760">
+          <caret line="40" lean-forward="true" selection-start-line="40" selection-end-line="40" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller/RecommendController.java">
+    <entry file="file://$PROJECT_DIR$/src/DAO/Impl/RecommendDAOImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="9" column="59" selection-start-line="9" selection-start-column="59" selection-end-line="9" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/DAO/Impl/UserDAOImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="76" lean-forward="true" selection-start-line="76" selection-end-line="76" />
+        <state relative-caret-position="261">
+          <caret line="72" lean-forward="true" selection-start-line="72" selection-end-line="72" />
         </state>
       </provider>
     </entry>

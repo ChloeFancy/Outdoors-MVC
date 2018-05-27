@@ -111,6 +111,12 @@
         </property>
     </bean>
 
+    <bean id="recommendDAOImpl" class="DAO.Impl.RecommendDAOImpl">
+        <property name="sessionFactory" ref="sessionFactory">
+
+        </property>
+    </bean>
+
     <mvc:interceptors>
         <mvc:interceptor>
             <mvc:mapping path="/**" />

@@ -1,15 +1,14 @@
 package controller;
 
 import DAO.Impl.RecommendDAOImpl;
-import DAO.Impl.UserDAOImpl;
-import DAO.RecommendDAO;
 import model.RecommendEntity;
+import model.UserEntity;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 import util.BasicResponse;
+import util.unsignFromCookie;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -17,17 +16,31 @@ import javax.servlet.http.HttpServletRequest;
 @RequestMapping("/recommend")
 @CrossOrigin("http://localhost:8081")
 public class RecommendController extends BaseController<RecommendEntity> {
-    @RequestMapping(value = "/getRecSpot", method = {RequestMethod.GET})
+    @RequestMapping(value = "/getRecSpot", method = {RequestMethod.POST})
     public @ResponseBody
-    BasicResponse getRecSpot(RecommendEntity recommendEntity, HttpServletRequest request) {
+    BasicResponse getRecSpot(HttpServletRequest request) {
             BasicResponse response = new BasicResponse();
             response.setResCode("-1");
             response.setResMsg("error");
-            RecommendDAOImpl dao = new RecommendDAOImpl();
+
+            ApplicationContext context =
+                    new ClassPathXmlApplicationContext("applicationContext.xml");
+            RecommendDAOImpl recommendDAO = (RecommendDAOImpl) context.getBean("recommendDAOImpl");
+
+            UserEntity fromToken = unsignFromCookie.unsign(request);
+
             try {
+                RecommendEntity recommendEntity = new RecommendEntity();
+                if(fromToken!=null){
+                    recommendEntity.setIdUser(fromToken.getId());
+
+                    response.setData(recommendDAO.getRecSpot(recommendEntity));
+                }else{
+                    response.setData(recommendDAO.getMostPopularSpots());
+                }
+
                 response.setResCode("1");
                 response.setResMsg("success");
-                response.setData(dao.getRecSpot(recommendEntity));
                 return response;
             } catch (Exception ex) {
                 ex.printStackTrace();
