@@ -13,22 +13,22 @@ import org.hibernate.cfg.Configuration;
 import org.hibernate.query.Query;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class StrategyDAOImpl implements StrategyDAO {
-    public SessionFactory getSessionFactory() {
-        return sessionFactory;
-    }
-
-    public void setSessionFactory(SessionFactory sessionFactory) {
-        this.sessionFactory = sessionFactory;
-    }
 
     @Qualifier("sessionFactory")
     @Autowired
-    private SessionFactory sessionFactory;
+    private SessionFactory sessionFactory = new Configuration().configure().buildSessionFactory();
+
+    ApplicationContext context =
+            new ClassPathXmlApplicationContext("applicationContext.xml");
+    CommentDAOImpl commentDAO = (CommentDAOImpl) context.getBean("commentDAOImpl");
+    BaseDAOImpl<StrategyEntity> strategyEntityBaseDAO = (BaseDAOImpl<StrategyEntity>) context.getBean("baseDaoImpl");
 
     @Override
     public JSONArray findArticlesByKeyword(String keyword) {
@@ -60,13 +60,11 @@ public class StrategyDAOImpl implements StrategyDAO {
         StrategyEntity tmp = new StrategyEntity();
         tmp.setId(id);
         try {
-            BaseDAOImpl<StrategyEntity> baseDAO = new BaseDAOImpl<>();
-            tmp = baseDAO.findById(tmp);
+            tmp = strategyEntityBaseDAO.findById(tmp);
             if(tmp==null){
                 return null;
             }
 
-            CommentDAOImpl commentDAO = new CommentDAOImpl();
             JSONArray comments = commentDAO.findByStrategy(id);
             JSONObject result = new JSONObject();
             result.put("comments",comments);

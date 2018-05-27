@@ -48,6 +48,7 @@
                 <value>model.UserEntity</value>
                 <value>model.CountryEntity</value>
                 <value>model.FollowEntity</value>
+                <value>model.RecommendEntity</value>
             </list>
         </property>
         <property name="mappingLocations">
@@ -64,6 +65,7 @@
                 <value>classpath:model/FollowEntity.hbm.xml</value>
                 <value>classpath:model/SpotEntity.hbm.xml</value>
                 <value>classpath:model/TagEntity.hbm.xml</value>
+                <value>classpath:model/RecommendEntity.hbm.xml</value>
             </list>
         </property>
     </bean>
@@ -86,11 +88,9 @@
         </property>
     </bean>
 
-    <bean id="followDAOImpl" class="DAO.Impl.FollowDAOImpl">
-        <property name="sessionFactory" ref="sessionFactory">
+    <!--<bean id="followDAOImpl" class="DAO.Impl.FollowDAOImpl">-->
 
-        </property>
-    </bean>
+    <!--</bean>-->
 
     <bean id="spotDAOImpl" class="DAO.Impl.SpotDAOImpl">
         <property name="sessionFactory" ref="sessionFactory">
@@ -99,11 +99,11 @@
     </bean>
 
 
-    <bean id="strategyDAOImpl" class="DAO.Impl.StrategyDAOImpl">
-        <property name="sessionFactory" ref="sessionFactory">
+    <!--<bean id="strategyDAOImpl" class="DAO.Impl.StrategyDAOImpl">-->
+        <!--<property name="sessionFactory" ref="sessionFactory">-->
 
-        </property>
-    </bean>
+        <!--</property>-->
+    <!--</bean>-->
 
     <bean id="userDAOImpl" class="DAO.Impl.UserDAOImpl">
         <property name="sessionFactory" ref="sessionFactory">
@@ -111,11 +111,11 @@
         </property>
     </bean>
 
-    <bean id="recommendDAOImpl" class="DAO.Impl.RecommendDAOImpl">
-        <property name="sessionFactory" ref="sessionFactory">
+    <!--<bean id="recommendDAOImpl" class="DAO.Impl.RecommendDAOImpl">-->
+        <!--<property name="sessionFactory" ref="sessionFactory">-->
 
-        </property>
-    </bean>
+        <!--</property>-->
+    <!--</bean>-->
 
     <mvc:interceptors>
         <mvc:interceptor>

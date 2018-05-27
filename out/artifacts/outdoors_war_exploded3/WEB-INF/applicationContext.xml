@@ -48,6 +48,7 @@
                 <value>model.UserEntity</value>
                 <value>model.CountryEntity</value>
                 <value>model.FollowEntity</value>
+                <value>model.RecommendEntity</value>
             </list>
         </property>
         <property name="mappingLocations">
@@ -64,6 +65,7 @@
                 <value>classpath:model/FollowEntity.hbm.xml</value>
                 <value>classpath:model/SpotEntity.hbm.xml</value>
                 <value>classpath:model/TagEntity.hbm.xml</value>
+                <value>classpath:model/RecommendEntity.hbm.xml</value>
             </list>
         </property>
     </bean>

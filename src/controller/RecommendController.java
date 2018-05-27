@@ -23,9 +23,7 @@ public class RecommendController extends BaseController<RecommendEntity> {
             response.setResCode("-1");
             response.setResMsg("error");
 
-            ApplicationContext context =
-                    new ClassPathXmlApplicationContext("applicationContext.xml");
-            RecommendDAOImpl recommendDAO = (RecommendDAOImpl) context.getBean("recommendDAOImpl");
+            RecommendDAOImpl recommendDAO = new RecommendDAOImpl();
 
             UserEntity fromToken = unsignFromCookie.unsign(request);
 

@@ -24,9 +24,14 @@ public class FollowController extends BaseController<FollowEntity> {
 
     ApplicationContext context =
             new ClassPathXmlApplicationContext("applicationContext.xml");
-    FollowDAOImpl dao = (FollowDAOImpl) context.getBean("followDAOImpl");
+
+//    FollowDAOImpl dao = (FollowDAOImpl) context.getBean("followDAOImpl");
+
+    FollowDAOImpl dao = new FollowDAOImpl();
 
     BaseDAOImpl<FollowEntity> baseDAO = (BaseDAOImpl<FollowEntity>) context.getBean("baseDaoImpl");
+    BaseDAOImpl<FollowEntity> followEntityBaseDAO = (BaseDAOImpl<FollowEntity>) context.getBean("baseDaoImpl");
+
 
     @RequestMapping(value="/findFollower",method = {RequestMethod.GET})
     public @ResponseBody
@@ -116,7 +121,9 @@ public class FollowController extends BaseController<FollowEntity> {
         followEntity.setIdFollowed(idFollowed);
         followEntity.setIdFollower(idFollower);
         try{
-            dao.unfollow(followEntity);
+            FollowEntity one =  followEntityBaseDAO.findByQuery(followEntity).get(0);
+            followEntityBaseDAO.delete(one);
+
             response.setResCode("1");
             response.setResMsg("success");
             return response;
