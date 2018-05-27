@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="model.CommentEntity" table="comment" schema="outdoors">
+        <id name="id">
+            <column name="id" sql-type="int(11)"/>
+        </id>
+        <property name="idWriter">
+            <column name="id_writer" sql-type="int(11)" />
+        </property>
+        <property name="idStrategy">
+            <column name="id_strategy" sql-type="int(11)"/>
+        </property>
+        <property name="content">
+            <column name="content" sql-type="text"/>
+        </property>
+        <property name="photoPath">
+            <column name="photoPath" sql-type="varchar(50)" length="50"/>
+        </property>
+    </class>
+</hibernate-mapping>

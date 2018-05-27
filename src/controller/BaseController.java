@@ -2,6 +2,8 @@ package controller;
 
 import DAO.Impl.BaseDAOImpl;
 import com.alibaba.fastjson.JSONObject;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import util.BasicResponse;
@@ -16,6 +18,10 @@ import java.lang.reflect.Method;
 @Controller
 @CrossOrigin("http://localhost:8081")
 public abstract class BaseController<T> {
+    ApplicationContext context =
+            new ClassPathXmlApplicationContext("applicationContext.xml");
+    BaseDAOImpl<T> baseDAO = (BaseDAOImpl<T>) context.getBean("baseDaoImpl");
+
     @RequestMapping(value="/add",method={RequestMethod.POST})
     public @ResponseBody
     BasicResponse add(T t, HttpServletRequest request){
@@ -23,7 +29,7 @@ public abstract class BaseController<T> {
         response.setResCode("-1");
         response.setResMsg("Error");
 
-        BaseDAOImpl<T> baseDAO = new BaseDAOImpl<>();
+//        BaseDAOImpl<T> baseDAO = new BaseDAOImpl<>();
         try{
             request.setCharacterEncoding("utf-8");
             if(baseDAO.insert(t).equals("success")){
@@ -87,9 +93,9 @@ public abstract class BaseController<T> {
         BasicResponse response = new BasicResponse();
         response.setResCode("-1");
         response.setResMsg("Error");
-        BaseDAOImpl<T> admin = new BaseDAOImpl<>();
+//        BaseDAOImpl<T> admin = new BaseDAOImpl<>();
         try{
-            response.setData(admin.findById(t));
+            response.setData(baseDAO.findById(t));
             response.setResCode("1");
             response.setResMsg("success");
             return response;
@@ -105,10 +111,10 @@ public abstract class BaseController<T> {
         BasicResponse response = new BasicResponse();
         response.setResCode("-1");
         response.setResMsg("Error");
-        BaseDAOImpl<T> admin = new BaseDAOImpl<>();
+//        BaseDAOImpl<T> admin = new BaseDAOImpl<>();
         try{
-            response.setData(admin.findList(t));
-            response.setResMsg(admin.countAll(t)+"");
+            response.setData(baseDAO.findList(t));
+            response.setResMsg(baseDAO.countAll(t)+"");
             response.setResCode("1");
             response.setResMsg("success");
             return response;
@@ -124,9 +130,9 @@ public abstract class BaseController<T> {
         BasicResponse response = new BasicResponse();
         response.setResCode("-1");
         response.setResMsg("Error");
-        BaseDAOImpl<T> admin = new BaseDAOImpl<>();
+//        BaseDAOImpl<T> admin = new BaseDAOImpl<>();
         try{
-            T tmp = admin.findOne(t);
+            T tmp = baseDAO.findOne(t);
             response.setData(tmp);
             if(tmp==null){
                 //fail
@@ -149,10 +155,10 @@ public abstract class BaseController<T> {
         BasicResponse response = new BasicResponse();
         response.setResCode("-1");
         response.setResMsg("Error");
-        BaseDAOImpl<T> admin = new BaseDAOImpl<>();
+//        BaseDAOImpl<T> admin = new BaseDAOImpl<>();
         try{
             request.setCharacterEncoding("utf-8");
-            admin.update(t);
+            baseDAO.update(t);
             response.setResCode("1");
             response.setResMsg("success");
             return response;
@@ -168,9 +174,9 @@ public abstract class BaseController<T> {
         BasicResponse response = new BasicResponse();
         response.setResCode("-1");
         response.setResMsg("Error");
-        BaseDAOImpl<T> admin = new BaseDAOImpl<>();
+//        BaseDAOImpl<T> admin = new BaseDAOImpl<>();
         try{
-            admin.delete(t);
+            baseDAO.delete(t);
             response.setResCode("1");
             response.setResMsg("success");
             return response;
@@ -189,9 +195,9 @@ public abstract class BaseController<T> {
         BasicResponse response = new BasicResponse();
         response.setResCode("-1");
         response.setResMsg("Error");
-        BaseDAOImpl<T> admin = new BaseDAOImpl<>();
+//        BaseDAOImpl<T> admin = new BaseDAOImpl<>();
         try{
-            response.setData(admin.findByQuery(t));
+            response.setData(baseDAO.findByQuery(t));
             response.setResCode("1");
             response.setResMsg("success");
             return response;

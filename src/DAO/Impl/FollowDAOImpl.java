@@ -4,12 +4,21 @@ import DAO.BaseDAO;
 import DAO.FollowDAO;
 import model.FollowEntity;
 import model.UserEntity;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
 public class FollowDAOImpl extends BaseDAOImpl<FollowEntity> implements FollowDAO {
+
+
+    ApplicationContext context =
+            new ClassPathXmlApplicationContext("applicationContext.xml");
+
+    BaseDAOImpl<UserEntity> dao = (BaseDAOImpl<UserEntity>) context.getBean("baseDaoImpl");
+
     @Override
     public List<UserEntity> findFollower(FollowEntity followEntity) throws Exception {
         List<UserEntity> resultList = new ArrayList<>();
@@ -24,8 +33,7 @@ public class FollowDAOImpl extends BaseDAOImpl<FollowEntity> implements FollowDA
             tempUser.setId(tempFollow.getIdFollower());
             System.out.println(tempUser.getId());
             //根据id查询详细信息
-            BaseDAOImpl<UserEntity> tempDAO=new BaseDAOImpl<>();
-            tempUser=tempDAO.findById(tempUser);
+            tempUser=dao.findById(tempUser);
             resultList.add(tempUser);
         }
         return resultList;
@@ -41,18 +49,18 @@ public class FollowDAOImpl extends BaseDAOImpl<FollowEntity> implements FollowDA
             tempFollow = (FollowEntity)iterator.next();
             tempUser.setId(tempFollow.getIdFollowed());
             //根据id查询详细信息
-            BaseDAOImpl<UserEntity> tempDAO=new BaseDAOImpl<>();
-            tempUser=tempDAO.findById(tempUser);
+            tempUser=dao.findById(tempUser);
             resultList.add(tempUser);
         }
         return resultList;
     }
 
+    BaseDAOImpl<FollowEntity> followEntityBaseDAO = (BaseDAOImpl<FollowEntity>) context.getBean("baseDaoImpl");
+
     @Override
     public Boolean unfollow(FollowEntity followEntity) throws Exception {
-        BaseDAOImpl<FollowEntity> baseDAO = new BaseDAOImpl<>();
-        FollowEntity one =  baseDAO.findByQuery(followEntity).get(0);
-        baseDAO.delete(one);
+        FollowEntity one =  followEntityBaseDAO.findByQuery(followEntity).get(0);
+        followEntityBaseDAO.delete(one);
         return null;
     }
 }

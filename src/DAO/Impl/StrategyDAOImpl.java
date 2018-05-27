@@ -11,12 +11,24 @@ import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.hibernate.cfg.Configuration;
 import org.hibernate.query.Query;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class StrategyDAOImpl implements StrategyDAO {
-    private SessionFactory sessionFactory = new Configuration().configure().buildSessionFactory();
+    public SessionFactory getSessionFactory() {
+        return sessionFactory;
+    }
+
+    public void setSessionFactory(SessionFactory sessionFactory) {
+        this.sessionFactory = sessionFactory;
+    }
+
+    @Qualifier("sessionFactory")
+    @Autowired
+    private SessionFactory sessionFactory;
 
     @Override
     public JSONArray findArticlesByKeyword(String keyword) {
@@ -40,5 +52,39 @@ public class StrategyDAOImpl implements StrategyDAO {
         }
 
         return JSONArray.parseArray(JSON.toJSONString(resultList));
+    }
+
+    @Override
+    public JSONObject getArticleAndComments(int id) {
+
+        StrategyEntity tmp = new StrategyEntity();
+        tmp.setId(id);
+        try {
+            BaseDAOImpl<StrategyEntity> baseDAO = new BaseDAOImpl<>();
+            tmp = baseDAO.findById(tmp);
+            if(tmp==null){
+                return null;
+            }
+
+            CommentDAOImpl commentDAO = new CommentDAOImpl();
+            JSONArray comments = commentDAO.findByStrategy(id);
+            JSONObject result = new JSONObject();
+            result.put("comments",comments);
+
+            Session s = sessionFactory.openSession();
+            Transaction tx = s.beginTransaction();
+
+            String hql = "select u from StrategyEntity s,UserEntity u where u.id = "+tmp.getIdWriter();
+            Query query= s.createQuery(hql);
+            List<UserEntity> list = query.list();
+            tx.commit();
+            JSONObject strategy = JSON.parseObject(JSON.toJSONString(tmp));
+            strategy.put("writerName",list.get(0).getName());
+            result.put("strategy",strategy);
+            return result;
+        }catch (Exception ex){
+            ex.printStackTrace();
+        }
+        return null;
     }
 }

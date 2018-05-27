@@ -2,12 +2,13 @@ package controller;
 
 import DAO.Impl.BaseDAOImpl;
 import model.BrowseEntity;
+import model.UserEntity;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 import util.BasicResponse;
+import util.unsignFromCookie;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -15,13 +16,30 @@ import javax.servlet.http.HttpServletRequest;
 @RequestMapping("/browse")
 @CrossOrigin("http://localhost:8081")
 public class BrowseController extends BaseController<BrowseEntity> {
-    @RequestMapping(value="/updateRecord",method = {RequestMethod.GET})
+
+    ApplicationContext context =
+            new ClassPathXmlApplicationContext("applicationContext.xml");
+    BaseDAOImpl<BrowseEntity> dao = (BaseDAOImpl<BrowseEntity>) context.getBean("baseDaoImpl");
+
+
+    @RequestMapping(value="/updateRecord",method = {RequestMethod.POST})
     public @ResponseBody
-    BasicResponse updateRecord(BrowseEntity browseEntity,HttpServletRequest request)
+    BasicResponse updateRecord(@RequestParam int idSpot, HttpServletRequest request)
     {
-        BasicResponse response=new BasicResponse();
-        BaseDAOImpl<BrowseEntity> dao = new BaseDAOImpl<>();
+        BasicResponse response = new BasicResponse();
         try{
+//            BaseDAOImpl<BrowseEntity> dao = new BaseDAOImpl<>();
+            UserEntity userEntity = unsignFromCookie.unsign(request);
+            if(userEntity==null){
+                response.setResCode("0");
+                response.setResMsg("noUser");
+                return response;
+            }
+            int idUser = userEntity.getId();
+            BrowseEntity browseEntity = new BrowseEntity();
+            browseEntity.setIdSpot(idSpot);
+            browseEntity.setIdUser(idUser);
+
             if(dao.findByQuery(browseEntity).isEmpty()) {//没有存在过
                 browseEntity.setCount(1);//很奇怪,数据库里设了默认值但hibernate不会加上
                 dao.insert(browseEntity);
@@ -40,7 +58,6 @@ public class BrowseController extends BaseController<BrowseEntity> {
         }catch (Exception e){
             response.setResCode("-1");
             response.setResMsg("Error");
-            response.setData(browseEntity);
             e.printStackTrace();
         }
         return response;

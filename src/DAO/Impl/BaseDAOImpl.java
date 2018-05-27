@@ -6,6 +6,10 @@ import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.hibernate.cfg.Configuration;
 import org.hibernate.query.Query;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
@@ -15,7 +19,9 @@ import java.util.List;
 
 public class BaseDAOImpl<T> implements BaseDAO<T> {
 
-    private SessionFactory sessionFactory = new Configuration().configure().buildSessionFactory();
+    @Qualifier("sessionFactory")
+    @Autowired
+    private SessionFactory sessionFactory;
 
     @Override
     public String insert(T t) throws Exception {
@@ -25,7 +31,6 @@ public class BaseDAOImpl<T> implements BaseDAO<T> {
             s.save(t);
             tx.commit();
             s.close();
-//            sessionFactory.close();
             return "success";
         }catch (Exception ex){
             ex.printStackTrace();

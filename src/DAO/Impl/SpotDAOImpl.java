@@ -11,13 +11,17 @@ import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.hibernate.cfg.Configuration;
 import org.hibernate.query.Query;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class SpotDAOImpl implements SpotDAO {
 
-    private SessionFactory sessionFactory = new Configuration().configure().buildSessionFactory();
+    @Qualifier("sessionFactory")
+    @Autowired
+    private SessionFactory sessionFactory;
 
     @Override
     public JSONArray findSpotsNameLike(String name) {

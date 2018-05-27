@@ -1,9 +1,13 @@
 package controller;
 
 import DAO.Impl.BaseDAOImpl;
+import DAO.Impl.CommentDAOImpl;
+import model.BrowseEntity;
 import model.FollowEntity;
 import DAO.Impl.FollowDAOImpl;
 import model.UserEntity;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import util.BasicResponse;
@@ -17,13 +21,20 @@ import javax.servlet.http.HttpServletRequest;
 @RequestMapping("/follow")
 @CrossOrigin("http://localhost:8081")
 public class FollowController extends BaseController<FollowEntity> {
+
+    ApplicationContext context =
+            new ClassPathXmlApplicationContext("applicationContext.xml");
+    FollowDAOImpl dao = (FollowDAOImpl) context.getBean("followDAOImpl");
+
+    BaseDAOImpl<FollowEntity> baseDAO = (BaseDAOImpl<FollowEntity>) context.getBean("baseDaoImpl");
+
     @RequestMapping(value="/findFollower",method = {RequestMethod.GET})
     public @ResponseBody
     BasicResponse findFollower(FollowEntity followed, HttpServletRequest request) {
         BasicResponse response = new BasicResponse();
         response.setResCode("-1");
         response.setResMsg("Error");
-        FollowDAOImpl dao = new FollowDAOImpl();
+//        FollowDAOImpl dao = new FollowDAOImpl();
         try{
             response.setData(dao.findFollower(followed));
             response.setResCode("1");
@@ -43,7 +54,7 @@ public class FollowController extends BaseController<FollowEntity> {
         BasicResponse response = new BasicResponse();
         response.setResCode("-1");
         response.setResMsg("Error");
-        FollowDAOImpl dao = new FollowDAOImpl();
+//        FollowDAOImpl dao = new FollowDAOImpl();
         try{
             response.setData(dao.findFollowed(follower));
             response.setResCode("1");
@@ -63,7 +74,6 @@ public class FollowController extends BaseController<FollowEntity> {
         BasicResponse response = new BasicResponse();
         response.setResCode("-1");
         response.setResMsg("Error");
-        BaseDAOImpl<FollowEntity> dao = new BaseDAOImpl();
         UserEntity fromToken = unsignFromCookie.unsign(request);
         if(fromToken==null){
             //说明token已失效
@@ -76,7 +86,7 @@ public class FollowController extends BaseController<FollowEntity> {
         followEntity.setIdFollower(idFollower);
 
         try{
-            dao.insert(followEntity);
+            baseDAO.insert(followEntity);
             response.setResCode("1");
             response.setResMsg("success");
             return response;
@@ -94,7 +104,7 @@ public class FollowController extends BaseController<FollowEntity> {
         BasicResponse response = new BasicResponse();
         response.setResCode("-1");
         response.setResMsg("Error");
-        FollowDAOImpl dao = new FollowDAOImpl();
+//        FollowDAOImpl dao = new FollowDAOImpl();
         UserEntity fromToken = unsignFromCookie.unsign(request);
         if(fromToken==null){
             //说明token已失效

@@ -11,6 +11,8 @@ import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.hibernate.cfg.Configuration;
 import org.hibernate.query.Query;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import util.BasicResponse;
 
 import javax.transaction.Transactional;
@@ -20,8 +22,9 @@ import java.util.List;
 @Transactional
 public class UserDAOImpl extends BaseDAOImpl<UserEntity> implements UserDAO {
 
-    private SessionFactory sessionFactory = new Configuration().configure().buildSessionFactory();
-
+    @Qualifier("sessionFactory")
+    @Autowired
+    private SessionFactory sessionFactory;
     //用户是否存在
     @Override
     public boolean hasUser(UserEntity userEntity) throws Exception{
@@ -31,19 +34,12 @@ public class UserDAOImpl extends BaseDAOImpl<UserEntity> implements UserDAO {
         String hql_mail = "from UserEntity as a where mail = \'"+userEntity.getMail()+"\'";
         Query query = s.createQuery(hql_mail);
         List list_mail=query.list();
-        System.out.println(userEntity.getMail());///
+        System.out.println(userEntity.getMail());
         System.out.println("list_mail"+list_mail);
         query = s.createQuery(hql_tel);
         List list_tel=query.list();
-        System.out.println(userEntity.getTel());////
+        System.out.println(userEntity.getTel());
         System.out.println("list_tell"+list_tel);
-//        if ((list_mail != null&&userEntity.getMail()!=null)
-//                || (list_tel != null&&userEntity.getTel()!=null)
-//                ||(userEntity.getTel()==null&&userEntity.getMail()==null) //电话邮箱都没有
-//                ||userEntity.getPassword()==null                            //没有密码
-//        ) {
-//            return true;
-//        }
         if(list_mail.isEmpty()&&list_tel.isEmpty()//都找不到
                 &&!(userEntity.getMail()==null&&userEntity.getTel()==null)//都不为空
                 &&userEntity.getPassword()!=null)//都不为空
@@ -60,30 +56,53 @@ public class UserDAOImpl extends BaseDAOImpl<UserEntity> implements UserDAO {
     public JSONArray findUsersNameLike(UserEntity userEntity,String name) {
         Session s = sessionFactory.openSession();
         Transaction tx = s.beginTransaction();
-
-        int currentUser = userEntity.getId();
-
-        String hql = "select u from UserEntity u where u.name like '%"+name+"%' and u.id <> "+currentUser;
-        Query query= s.createQuery(hql);
-        List<UserEntity> list = query.list();
+        String hql = "";
         List<JSONObject> resultList = new ArrayList<>();
+        if(userEntity!=null){
+            int currentUser = userEntity.getId();
 
-        for (UserEntity object : list) {
+            hql = "select u from UserEntity u where u.name like '%"+name+"%' and u.id <> "+currentUser;
 
-            JSONObject json = new JSONObject();
-            json.put("id",object.getId());
-            json.put("name",object.getName());
-            json.put("mail",object.getMail());
-            json.put("tel",object.getMail());
+            Query query= s.createQuery(hql);
+            List<UserEntity> list = query.list();
 
-            String findFollow = "select f from FollowEntity f where f.idFollower = "+currentUser
-                    + " and f.idFollowed = "+object.getId();
-            Query query1 = s.createQuery(findFollow);
-            List<UserEntity> list1 = query1.list();
-            json.put("canBeFollowed",!(list1.size()>0));
+            for (UserEntity object : list) {
 
-            resultList.add(json);
+                JSONObject json = new JSONObject();
+                json.put("id",object.getId());
+                json.put("name",object.getName());
+                json.put("mail",object.getMail());
+                json.put("tel",object.getMail());
+
+                String findFollow = "select f from FollowEntity f where f.idFollower = "+currentUser
+                        + " and f.idFollowed = "+object.getId();
+                Query query1 = s.createQuery(findFollow);
+                List<UserEntity> list1 = query1.list();
+                json.put("canBeFollowed",!(list1.size()>0));
+
+                resultList.add(json);
+            }
+        }else{
+            hql = "select u from UserEntity u where u.name like '%"+name+"%'";
+            Query query= s.createQuery(hql);
+            List<UserEntity> list = query.list();
+
+
+            for (UserEntity object : list) {
+
+                JSONObject json = new JSONObject();
+                json.put("id",object.getId());
+                json.put("name",object.getName());
+                json.put("mail",object.getMail());
+                json.put("tel",object.getMail());
+
+                json.put("canBeFollowed",true);
+
+                resultList.add(json);
+            }
         }
+
+
         return JSONArray.parseArray(JSON.toJSONString(resultList));
     }
 

@@ -74,9 +74,13 @@
 
     <!--要用到的bean的配置-->
 
-    <bean id="BaseDaoImpl" class="DAO.Impl.BaseDAOImpl">
-        <property name="sessionFactory" ref="sessionFactory"></property>
+    <bean id="baseDaoImpl" class="DAO.Impl.BaseDAOImpl">
+        <property name="sessionFactory" ref="sessionFactory">
+
+        </property>
     </bean>
+
+
 
     <mvc:interceptors>
         <mvc:interceptor>

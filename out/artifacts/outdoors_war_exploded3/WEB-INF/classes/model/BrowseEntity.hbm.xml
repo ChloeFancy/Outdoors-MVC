@@ -15,7 +15,7 @@
             <column name="id_spot" sql-type="int(11)"/>
         </property>
         <property name="count">
-            <column name="count" sql-type="int(11)"/>
+            <column name="count" sql-type="int(11)" default="1"/>
         </property>
     </class>
 </hibernate-mapping>

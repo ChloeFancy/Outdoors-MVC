@@ -16,7 +16,15 @@ import java.util.List;
 
 public class CommentDAOImpl implements CommentDAO {
 
-    private SessionFactory sessionFactory = new Configuration().configure().buildSessionFactory();
+    private SessionFactory sessionFactory;
+
+    public SessionFactory getSessionFactory() {
+        return sessionFactory;
+    }
+
+    public void setSessionFactory(SessionFactory sessionFactory) {
+        this.sessionFactory = sessionFactory;
+    }
 
     @Override
     public JSONArray findByStrategy(int idStrategy) {

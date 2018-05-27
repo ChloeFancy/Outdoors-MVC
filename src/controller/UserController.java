@@ -2,11 +2,17 @@ package controller;
 
 
 import DAO.Impl.BaseDAOImpl;
+import DAO.Impl.StrategyDAOImpl;
 import DAO.Impl.UserDAOImpl;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
+import model.BrowseEntity;
+import model.FollowEntity;
+import model.StrategyEntity;
 import model.UserEntity;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import util.BasicResponse;
@@ -20,13 +26,23 @@ import javax.servlet.http.HttpServletRequest;
 @CrossOrigin("http://localhost:8081")
 public class UserController extends BaseController<UserEntity>{
 
+    ApplicationContext context =
+            new ClassPathXmlApplicationContext("applicationContext.xml");
+    UserDAOImpl userDAO = (UserDAOImpl) context.getBean("userDAOImpl");
+
+    BaseDAOImpl<UserEntity> userEntityBaseDAO = (BaseDAOImpl<UserEntity>) context.getBean("baseDaoImpl");
+
+    BaseDAOImpl<StrategyEntity> strategyEntityBaseDAO = (BaseDAOImpl<StrategyEntity>) context.getBean("baseDaoImpl");
+
+    BaseDAOImpl<FollowEntity> followEntityBaseDAO = (BaseDAOImpl<FollowEntity>) context.getBean("baseDaoImpl");
+
+
     @RequestMapping(value="/fuzzyQuery",method={RequestMethod.GET})
     public @ResponseBody
     BasicResponse search(@RequestParam String keyword,HttpServletRequest request){
         BasicResponse response = new BasicResponse();
         response.setResCode("1");
         response.setResMsg("success");
-        UserDAOImpl userDAO = new UserDAOImpl();
         UserEntity userEntity = unsignFromCookie.unsign(request);
         JSONArray jsonArray = userDAO.findUsersNameLike(userEntity,keyword);
         response.setData(jsonArray);
@@ -61,10 +77,9 @@ public class UserController extends BaseController<UserEntity>{
         }
 
         //如果未失效且旧密码正确
-        BaseDAOImpl<UserEntity> dao = new BaseDAOImpl<>();
         try{
             fromToken.setPassword(newPassword);
-            dao.update(fromToken);
+            userEntityBaseDAO.update(fromToken);
             response.setResCode("1");//修改成功
             response.setResMsg("success");
             return response;
@@ -83,13 +98,11 @@ public class UserController extends BaseController<UserEntity>{
         response.setResCode("-1");
         response.setResMsg("Error");
         try{
-            UserDAOImpl userDAO = new UserDAOImpl();
             UserEntity result = userDAO.login(userEntity);
             if(result!=null){
                 //生成用户登录的token标记登录状态
                 String token = JWT.sign(result, 30L * 24L * 3600L * 1000L);
                 UserEntity test = JWT.unsign(token,UserEntity.class);
-                System.out.println(JSON.toJSONString(test));
                 if (token != null) {
                     System.out.println(token);
                     JSONObject tokenObj = new JSONObject();
@@ -135,13 +148,12 @@ public class UserController extends BaseController<UserEntity>{
         BasicResponse response = new BasicResponse();
         response.setResCode("-1");//用户已存在
         response.setResMsg("Error");
-        UserDAOImpl dao = new UserDAOImpl();
         try{
-            if(!dao.hasUser(userEntity)) {//如果没有出现过
-                dao.insert(userEntity);
+            if(!userDAO.hasUser(userEntity)) {//如果没有出现过
+                userDAO.insert(userEntity);
                 response.setResCode("1");
                 response.setResMsg("Success");
-                response.setData(dao.findByQuery(userEntity).get(0));   
+                response.setData(userDAO.findByQuery(userEntity).get(0));
                 return response;
             }
 
@@ -152,6 +164,37 @@ public class UserController extends BaseController<UserEntity>{
         return response;
     }
 
+    @RequestMapping(value="/findUserDetail",method = {RequestMethod.GET})
+    public @ResponseBody
+    BasicResponse findUserDetail(UserEntity userEntity, HttpServletRequest request) {
+        BasicResponse response = new BasicResponse();
+        response.setResCode("-1");//用户已存在
+        response.setResMsg("Error");
+        try{
+            StrategyEntity tmp = new StrategyEntity();
+            tmp.setIdWriter(userEntity.getId());
+            JSONObject result = new JSONObject();
+            result.put("strategies",strategyEntityBaseDAO.findByQuery(tmp));
+
+            FollowEntity followEntity = new FollowEntity();
+            followEntity.setIdFollower(userEntity.getId());
+            result.put("follows",followEntityBaseDAO.findByQuery(followEntity));
+
+            followEntity.setIdFollower(null);
+            followEntity.setIdFollowed(userEntity.getId());
+            result.put("followers",followEntityBaseDAO.findByQuery(followEntity));
+
+            result.put("user",userEntityBaseDAO.findById(userEntity));
+
+            response.setData(result);
+            response.setResCode("1");
+            return response;
+        }catch(Exception ex){
+            response.setData(userEntity);
+            ex.printStackTrace();
+        }
+        return response;
+    }
 
     //备注：子类中的requestMapping不能和父类重名
 //    @RequestMapping(value="/findAll",method = {Req uestMethod.GET})
