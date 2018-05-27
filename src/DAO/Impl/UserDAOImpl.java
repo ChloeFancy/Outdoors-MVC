@@ -5,6 +5,7 @@ import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
 import controller.BaseController;
+import model.SpotEntity;
 import model.UserEntity;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
