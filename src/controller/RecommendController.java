@@ -1,6 +1,7 @@
 package controller;
 
 import DAO.Impl.RecommendDAOImpl;
+import DAO.Impl.UserDAOImpl;
 import model.RecommendEntity;
 import model.UserEntity;
 import org.springframework.context.ApplicationContext;
@@ -16,6 +17,11 @@ import javax.servlet.http.HttpServletRequest;
 @RequestMapping("/recommend")
 @CrossOrigin("http://localhost:8081")
 public class RecommendController extends BaseController<RecommendEntity> {
+
+    private ApplicationContext context =
+            new ClassPathXmlApplicationContext("applicationContext.xml");
+    private RecommendDAOImpl recommendDAO = (RecommendDAOImpl) context.getBean("recommendDAOImpl");
+
     @RequestMapping(value = "/getRecSpot", method = {RequestMethod.POST})
     public @ResponseBody
     BasicResponse getRecSpot(HttpServletRequest request) {
@@ -23,15 +29,12 @@ public class RecommendController extends BaseController<RecommendEntity> {
             response.setResCode("-1");
             response.setResMsg("error");
 
-            RecommendDAOImpl recommendDAO = new RecommendDAOImpl();
-
             UserEntity fromToken = unsignFromCookie.unsign(request);
 
             try {
                 RecommendEntity recommendEntity = new RecommendEntity();
                 if(fromToken!=null){
                     recommendEntity.setIdUser(fromToken.getId());
-
                     response.setData(recommendDAO.getRecSpot(recommendEntity));
                 }else{
                     response.setData(recommendDAO.getMostPopularSpots());

@@ -1,19 +1,12 @@
 package DAO.Impl;
 
 import DAO.RecommendDAO;
-import com.alibaba.fastjson.JSON;
-import com.alibaba.fastjson.JSONArray;
 import model.RecommendEntity;
 import model.SpotEntity;
-import model.UserEntity;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
-import org.hibernate.cfg.Configuration;
 import org.hibernate.query.Query;
-import org.springframework.context.ApplicationContext;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
-import sun.plugin.javascript.navig.LinkArray;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -21,41 +14,56 @@ import java.util.List;
 
 public class RecommendDAOImpl implements RecommendDAO {
 
-    private SessionFactory sessionFactory = new Configuration().configure().buildSessionFactory();
+    private SessionFactory sessionFactory ;
 
-    ApplicationContext context =
-            new ClassPathXmlApplicationContext("applicationContext.xml");
+    public void setSessionFactory(SessionFactory sessionFactory) {
+        this.sessionFactory = sessionFactory;
+    }
+//    ApplicationContext context =
+//            new ClassPathXmlApplicationContext("applicationContext.xml");
 
-    BaseDAOImpl<SpotEntity> spotDao = (BaseDAOImpl<SpotEntity>) context.getBean("baseDaoImpl");
-    BaseDAOImpl<RecommendEntity> recommendEntityBaseDAO = ( BaseDAOImpl<RecommendEntity> )context.getBean("baseDaoImpl");
+//    BaseDAOImpl<SpotEntity> spotDao = (BaseDAOImpl<SpotEntity>) context.getBean("baseDaoImpl");
+//    BaseDAOImpl<RecommendEntity> recommendEntityBaseDAO = ( BaseDAOImpl<RecommendEntity> )context.getBean("baseDaoImpl");
+
     //获取推荐景点信息
     @Override
     public List<SpotEntity> getRecSpot(RecommendEntity recommendEntity) throws Exception{
         Session s = sessionFactory.openSession();
         Transaction tx = s.beginTransaction();
 
-        List<RecommendEntity> list = recommendEntityBaseDAO.findByQuery(recommendEntity);
+        String hql = "from RecommendEntity r where r.idUser = "+recommendEntity.getIdUser();
+        Query query = s.createQuery(hql);
+
+        List<RecommendEntity> list = query.list();
         List<SpotEntity> resultList = new ArrayList<>();
         List<SpotEntity> allSpotList;
 
         int count=0;
-        SpotEntity spotEntity = new SpotEntity();
 
         if (list.size() >= 6) {
             for (RecommendEntity object : list) {
-                spotEntity.setId(object.getId());
-                resultList.add(spotDao.findById(spotEntity));
+//                SpotEntity spotEntity = new SpotEntity();
+//                spotEntity.setId(object.getIdSpot());
+                hql = "from SpotEntity where id = "+object.getIdSpot();
+                query = s.createQuery(hql);
+                resultList.add((SpotEntity) query.list().get(0));
                 if (++count >= 6) {
                     break;
                 }
             }
+
         } else {
-            allSpotList = spotDao.findList(spotEntity);
-            System.out.println(JSON.toJSONString(allSpotList));
-            System.out.println();
+            SpotEntity spotEntity = new SpotEntity();
+
+            hql = "from SpotEntity ";
+            query = s.createQuery(hql);
+            allSpotList = query.list();
+//            allSpotList = spotDao.findList(spotEntity);
+
             for (RecommendEntity object : list) {
-                spotEntity.setId(object.getIdSpot());
-                resultList.add(spotDao.findById(spotEntity));
+                hql = "from SpotEntity where id = "+object.getIdSpot();
+                query = s.createQuery(hql);
+                resultList.add((SpotEntity) query.list().get(0));
                 count++;
             }
             //找出取6-count个不包含在resultList里的景点
@@ -93,8 +101,9 @@ public class RecommendDAOImpl implements RecommendDAO {
         int count=0;
         while(iterator.hasNext()){
             Object[] obj = (Object[])iterator.next();
-            spotEntity.setId(Integer.parseInt(obj[0].toString()));
-            resultList.add(spotDao.findById(spotEntity));
+            hql = "from SpotEntity where id = "+Integer.parseInt(obj[0].toString());
+            query = s.createQuery(hql);
+            resultList.add((SpotEntity) query.list().get(0));
             if (++count >= 6) {
                 break;
             }

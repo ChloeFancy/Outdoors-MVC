@@ -39,6 +39,7 @@
         </property>
         <property name="annotatedClasses">
             <list>
+                <value>model.BrowseEntity</value>
                 <value>model.CommentEntity</value>
                 <value>model.ContinentEntity</value>
                 <value>model.ManagerEntity</value>
@@ -53,6 +54,7 @@
         </property>
         <property name="mappingLocations">
             <list>
+                <value>classpath:model/BrowseEntity.hbm.xml</value>
                 <value>classpath:model/CommentEntity.hbm.xml</value>
                 <value>classpath:model/ContinentEntity.hbm.xml</value>
                 <value>classpath:model/ManagerEntity.hbm.xml</value>
@@ -111,11 +113,11 @@
         </property>
     </bean>
 
-    <!--<bean id="recommendDAOImpl" class="DAO.Impl.RecommendDAOImpl">-->
-        <!--<property name="sessionFactory" ref="sessionFactory">-->
+    <bean id="recommendDAOImpl" class="DAO.Impl.RecommendDAOImpl">
+        <property name="sessionFactory" ref="sessionFactory">
 
-        <!--</property>-->
-    <!--</bean>-->
+        </property>
+    </bean>
 
     <mvc:interceptors>
         <mvc:interceptor>
