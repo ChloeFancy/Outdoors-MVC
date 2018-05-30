@@ -109,6 +109,7 @@ public class UserController extends BaseController<UserEntity>{
                     System.out.println(token);
                     JSONObject tokenObj = new JSONObject();
                     tokenObj.put("userId",result.getId());
+                    tokenObj.put("username",result.getName());
                     tokenObj.put("token",token);
                     response.setData(tokenObj);
                 }

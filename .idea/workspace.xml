@@ -37,121 +37,7 @@
       <change afterPath="$PROJECT_DIR$/../../作业/7/src/model/XsbEntity.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../../作业/7/web/WEB-INF/applicationContext.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../../作业/7/web/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/c0f3b175-e011-426f-81b4-fea4f4d367c1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/outdoors_war_exploded3/WEB-INF/classes/DAO/FollowDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/outdoors_war_exploded3/WEB-INF/classes/DAO/FollowDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/outdoors_war_exploded3/WEB-INF/classes/DAO/Impl/BaseDAOImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/outdoors_war_exploded3/WEB-INF/classes/DAO/Impl/BaseDAOImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/outdoors_war_exploded3/WEB-INF/classes/DAO/Impl/CommentDAOImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/outdoors_war_exploded3/WEB-INF/classes/DAO/Impl/CommentDAOImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/outdoors_war_exploded3/WEB-INF/classes/DAO/Impl/FollowDAOImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/outdoors_war_exploded3/WEB-INF/classes/DAO/Impl/FollowDAOImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/outdoors_war_exploded3/WEB-INF/classes/DAO/Impl/RecommendDAOImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/outdoors_war_exploded3/WEB-INF/classes/DAO/Impl/RecommendDAOImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/outdoors_war_exploded3/WEB-INF/classes/DAO/Impl/SpotDAOImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/outdoors_war_exploded3/WEB-INF/classes/DAO/Impl/SpotDAOImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/outdoors_war_exploded3/WEB-INF/classes/DAO/Impl/StrategyDAOImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/outdoors_war_exploded3/WEB-INF/classes/DAO/Impl/StrategyDAOImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/outdoors_war_exploded3/WEB-INF/classes/DAO/Impl/UserDAOImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/outdoors_war_exploded3/WEB-INF/classes/DAO/Impl/UserDAOImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/outdoors_war_exploded3/WEB-INF/classes/DAO/StrategyDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/outdoors_war_exploded3/WEB-INF/classes/DAO/StrategyDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/outdoors_war_exploded3/WEB-INF/classes/applicationContext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/outdoors_war_exploded3/WEB-INF/classes/applicationContext.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/outdoors_war_exploded3/WEB-INF/classes/controller/FollowController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/outdoors_war_exploded3/WEB-INF/classes/controller/FollowController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/outdoors_war_exploded3/WEB-INF/classes/controller/SpotController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/outdoors_war_exploded3/WEB-INF/classes/controller/SpotController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/outdoors_war_exploded3/WEB-INF/classes/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/outdoors_war_exploded3/WEB-INF/classes/controller/UserController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/outdoors_war_exploded3/WEB-INF/classes/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/outdoors_war_exploded3/WEB-INF/classes/hibernate.cfg.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/outdoors_war_exploded3/WEB-INF/classes/model/BrowseEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/outdoors_war_exploded3/WEB-INF/classes/model/BrowseEntity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/outdoors_war_exploded3/WEB-INF/classes/model/BrowseEntity.hbm.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/outdoors_war_exploded3/WEB-INF/classes/model/BrowseEntity.hbm.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/outdoors_war_exploded3/WEB-INF/classes/model/CommentEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/outdoors_war_exploded3/WEB-INF/classes/model/CommentEntity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/outdoors_war_exploded3/WEB-INF/classes/model/CommentEntity.hbm.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/outdoors_war_exploded3/WEB-INF/classes/model/CommentEntity.hbm.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/outdoors_war_exploded3/WEB-INF/classes/model/ContinentEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/outdoors_war_exploded3/WEB-INF/classes/model/ContinentEntity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/outdoors_war_exploded3/WEB-INF/classes/model/ContinentEntity.hbm.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/outdoors_war_exploded3/WEB-INF/classes/model/ContinentEntity.hbm.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/outdoors_war_exploded3/WEB-INF/classes/model/CountryEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/outdoors_war_exploded3/WEB-INF/classes/model/CountryEntity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/outdoors_war_exploded3/WEB-INF/classes/model/CountryEntity.hbm.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/outdoors_war_exploded3/WEB-INF/classes/model/CountryEntity.hbm.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/outdoors_war_exploded3/WEB-INF/classes/model/FollowEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/outdoors_war_exploded3/WEB-INF/classes/model/FollowEntity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/outdoors_war_exploded3/WEB-INF/classes/model/FollowEntity.hbm.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/outdoors_war_exploded3/WEB-INF/classes/model/FollowEntity.hbm.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/outdoors_war_exploded3/WEB-INF/classes/model/ManagerEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/outdoors_war_exploded3/WEB-INF/classes/model/ManagerEntity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/outdoors_war_exploded3/WEB-INF/classes/model/ManagerEntity.hbm.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/outdoors_war_exploded3/WEB-INF/classes/model/ManagerEntity.hbm.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/outdoors_war_exploded3/WEB-INF/classes/model/RecommendEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/outdoors_war_exploded3/WEB-INF/classes/model/RecommendEntity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/outdoors_war_exploded3/WEB-INF/classes/model/RecommendEntity.hbm.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/outdoors_war_exploded3/WEB-INF/classes/model/RecommendEntity.hbm.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/outdoors_war_exploded3/WEB-INF/classes/model/SpotEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/outdoors_war_exploded3/WEB-INF/classes/model/SpotEntity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/outdoors_war_exploded3/WEB-INF/classes/model/SpotEntity.hbm.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/outdoors_war_exploded3/WEB-INF/classes/model/SpotEntity.hbm.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/outdoors_war_exploded3/WEB-INF/classes/model/StrategyEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/outdoors_war_exploded3/WEB-INF/classes/model/StrategyEntity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/outdoors_war_exploded3/WEB-INF/classes/model/StrategyEntity.hbm.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/outdoors_war_exploded3/WEB-INF/classes/model/StrategyEntity.hbm.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/outdoors_war_exploded3/WEB-INF/classes/model/TagEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/outdoors_war_exploded3/WEB-INF/classes/model/TagEntity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/outdoors_war_exploded3/WEB-INF/classes/model/TagEntity.hbm.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/outdoors_war_exploded3/WEB-INF/classes/model/TagEntity.hbm.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/outdoors_war_exploded3/WEB-INF/classes/model/UserEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/outdoors_war_exploded3/WEB-INF/classes/model/UserEntity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/outdoors_war_exploded3/WEB-INF/classes/model/UserEntity.hbm.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/outdoors_war_exploded3/WEB-INF/classes/model/UserEntity.hbm.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/outdoors_war_exploded3/WEB-INF/classes/util/unsignFromCookie.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/outdoors_war_exploded3/WEB-INF/classes/util/unsignFromCookie.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/outdoors/DAO/FollowDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/outdoors/DAO/FollowDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/outdoors/DAO/Impl/BaseDAOImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/outdoors/DAO/Impl/BaseDAOImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/outdoors/DAO/Impl/CommentDAOImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/outdoors/DAO/Impl/CommentDAOImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/outdoors/DAO/Impl/FollowDAOImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/outdoors/DAO/Impl/FollowDAOImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/outdoors/DAO/Impl/RecommendDAOImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/outdoors/DAO/Impl/RecommendDAOImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/outdoors/DAO/Impl/SpotDAOImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/outdoors/DAO/Impl/SpotDAOImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/outdoors/DAO/Impl/StrategyDAOImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/outdoors/DAO/Impl/StrategyDAOImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/outdoors/DAO/Impl/UserDAOImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/outdoors/DAO/Impl/UserDAOImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/outdoors/DAO/StrategyDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/outdoors/DAO/StrategyDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/outdoors/applicationContext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/outdoors/applicationContext.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/outdoors/controller/FollowController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/outdoors/controller/FollowController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/outdoors/controller/SpotController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/outdoors/controller/SpotController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/outdoors/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/outdoors/controller/UserController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/outdoors/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/outdoors/hibernate.cfg.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/outdoors/model/BrowseEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/outdoors/model/BrowseEntity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/outdoors/model/BrowseEntity.hbm.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/outdoors/model/BrowseEntity.hbm.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/outdoors/model/CommentEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/outdoors/model/CommentEntity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/outdoors/model/CommentEntity.hbm.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/outdoors/model/CommentEntity.hbm.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/outdoors/model/ContinentEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/outdoors/model/ContinentEntity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/outdoors/model/ContinentEntity.hbm.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/outdoors/model/ContinentEntity.hbm.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/outdoors/model/CountryEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/outdoors/model/CountryEntity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/outdoors/model/CountryEntity.hbm.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/outdoors/model/CountryEntity.hbm.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/outdoors/model/FollowEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/outdoors/model/FollowEntity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/outdoors/model/FollowEntity.hbm.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/outdoors/model/FollowEntity.hbm.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/outdoors/model/ManagerEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/outdoors/model/ManagerEntity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/outdoors/model/ManagerEntity.hbm.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/outdoors/model/ManagerEntity.hbm.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/outdoors/model/RecommendEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/outdoors/model/RecommendEntity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/outdoors/model/RecommendEntity.hbm.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/outdoors/model/RecommendEntity.hbm.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/outdoors/model/SpotEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/outdoors/model/SpotEntity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/outdoors/model/SpotEntity.hbm.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/outdoors/model/SpotEntity.hbm.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/outdoors/model/StrategyEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/outdoors/model/StrategyEntity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/outdoors/model/StrategyEntity.hbm.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/outdoors/model/StrategyEntity.hbm.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/outdoors/model/TagEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/outdoors/model/TagEntity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/outdoors/model/TagEntity.hbm.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/outdoors/model/TagEntity.hbm.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/outdoors/model/UserEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/outdoors/model/UserEntity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/outdoors/model/UserEntity.hbm.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/outdoors/model/UserEntity.hbm.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/outdoors/util/unsignFromCookie.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/outdoors/util/unsignFromCookie.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DAO/FollowDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DAO/FollowDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DAO/Impl/BaseDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DAO/Impl/BaseDAOImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DAO/Impl/CommentDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DAO/Impl/CommentDAOImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DAO/Impl/FollowDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DAO/Impl/FollowDAOImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DAO/Impl/RecommendDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DAO/Impl/RecommendDAOImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DAO/Impl/SpotDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DAO/Impl/SpotDAOImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DAO/Impl/StrategyDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DAO/Impl/StrategyDAOImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DAO/Impl/UserDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DAO/Impl/UserDAOImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DAO/StrategyDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DAO/StrategyDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/applicationContext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/applicationContext.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/FollowController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/FollowController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/SpotController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/SpotController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/hibernate.cfg.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/BrowseEntity.hbm.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/BrowseEntity.hbm.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/BrowseEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/BrowseEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/CommentEntity.hbm.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/CommentEntity.hbm.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/CommentEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/CommentEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/ContinentEntity.hbm.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/ContinentEntity.hbm.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/ContinentEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/ContinentEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/CountryEntity.hbm.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/CountryEntity.hbm.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/CountryEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/CountryEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/FollowEntity.hbm.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/FollowEntity.hbm.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/FollowEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/FollowEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/ManagerEntity.hbm.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/ManagerEntity.hbm.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/ManagerEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/ManagerEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/RecommendEntity.hbm.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/RecommendEntity.hbm.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/RecommendEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/RecommendEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/SpotEntity.hbm.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/SpotEntity.hbm.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/SpotEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/SpotEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/StrategyEntity.hbm.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/StrategyEntity.hbm.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/StrategyEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/StrategyEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/TagEntity.hbm.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/TagEntity.hbm.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/TagEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/TagEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/UserEntity.hbm.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/UserEntity.hbm.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/UserEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/UserEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/util/unsignFromCookie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/util/unsignFromCookie.java" afterDir="false" />
       <change beforePath="E:/Vue Programs/Vue-ToDo-App" beforeDir="false" afterPath="E:/Vue Programs/Vue-ToDo-App" afterDir="false" />
       <change beforePath="E:/gitTest-a/gitTest/1_3_2.html" beforeDir="false" afterPath="E:/gitTest-a/gitTest/1_3_2.html" afterDir="false" />
     </list>
@@ -178,35 +64,7 @@
     <select />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="UserController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/controller/UserController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="64">
-              <caret line="125" column="35" selection-start-line="125" selection-start-column="28" selection-end-line="125" selection-end-column="35" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="StrategyController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/controller/StrategyController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="228">
-              <caret line="34" column="50" selection-start-line="34" selection-start-column="50" selection-end-line="34" selection-end-column="50" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="StrategyDAOImpl.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/DAO/Impl/StrategyDAOImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1223">
-              <caret line="117" column="20" lean-forward="true" selection-start-line="117" selection-start-column="20" selection-end-line="117" selection-end-column="20" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -260,7 +118,6 @@
         <option value="$PROJECT_DIR$/src/controller/SpotController.java" />
         <option value="$PROJECT_DIR$/src/DAO/Impl/UserDAOImpl.java" />
         <option value="$PROJECT_DIR$/src/util/unsignFromCookie.java" />
-        <option value="$PROJECT_DIR$/src/controller/UserController.java" />
         <option value="$PROJECT_DIR$/src/DAO/FollowDAO.java" />
         <option value="$PROJECT_DIR$/src/applicationContext.xml" />
         <option value="$PROJECT_DIR$/src/model/BrowseEntity.hbm.xml" />
@@ -282,6 +139,7 @@
         <option value="$PROJECT_DIR$/src/controller/BaseController.java" />
         <option value="$PROJECT_DIR$/src/controller/FollowController.java" />
         <option value="$PROJECT_DIR$/src/DAO/Impl/StrategyDAOImpl.java" />
+        <option value="$PROJECT_DIR$/src/controller/UserController.java" />
       </list>
     </option>
   </component>
@@ -316,6 +174,7 @@
     <panes>
       <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -362,7 +221,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -585,11 +443,12 @@
       <workItem from="1527561829023" duration="8367000" />
       <workItem from="1527604515427" duration="4126000" />
       <workItem from="1527646695728" duration="3030000" />
+      <workItem from="1527673784788" duration="1873000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="142402000" />
+    <option name="totallyTimeSpent" value="144275000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -622,11 +481,11 @@
       <window_info anchor="bottom" id="Java Enterprise" order="11" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
       <window_info anchor="bottom" id="Version Control" order="13" weight="0.32616487" />
-      <window_info anchor="bottom" x="22" y="284" width="1237" height="112" id="Run" order="2" weight="0.22580644" />
+      <window_info active="true" anchor="bottom" x="22" y="284" width="1237" height="112" id="Run" order="2" visible="true" weight="0.22580644" />
       <window_info anchor="bottom" id="Spring" order="8" />
       <window_info anchor="bottom" id="Terminal" order="9" weight="0.32616487" />
       <window_info id="Persistence" order="2" sideWeight="0.29694322" side_tool="true" weight="0.24818109" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.70305675" visible="true" weight="0.25222313" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.70305675" visible="true" weight="0.25626516" />
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="right" id="Theme Preview" order="7" />
       <window_info id="Favorites" order="6" side_tool="true" />
@@ -1008,22 +867,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/controller/UserController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="64">
-          <caret line="125" column="35" selection-start-line="125" selection-start-column="28" selection-end-line="125" selection-end-column="35" />
+        <state relative-caret-position="266">
+          <caret line="111" column="62" lean-forward="true" selection-start-line="111" selection-start-column="62" selection-end-line="111" selection-end-column="62" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/controller/StrategyController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
+        <state relative-caret-position="19">
           <caret line="34" column="50" selection-start-line="34" selection-start-column="50" selection-end-line="34" selection-end-column="50" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/DAO/Impl/StrategyDAOImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1223">
-          <caret line="117" column="20" lean-forward="true" selection-start-line="117" selection-start-column="20" selection-end-line="117" selection-end-column="20" />
+        <state relative-caret-position="127">
+          <caret line="96" column="29" lean-forward="true" selection-start-line="96" selection-start-column="29" selection-end-line="96" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
