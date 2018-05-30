@@ -2,6 +2,7 @@ package controller;
 
 import DAO.Impl.BaseDAOImpl;
 import DAO.Impl.CommentDAOImpl;
+import com.alibaba.fastjson.JSON;
 import model.BrowseEntity;
 import model.FollowEntity;
 import DAO.Impl.FollowDAOImpl;
@@ -37,9 +38,13 @@ public class FollowController extends BaseController<FollowEntity> {
         BasicResponse response = new BasicResponse();
         response.setResCode("-1");
         response.setResMsg("Error");
-//        FollowDAOImpl dao = new FollowDAOImpl();
+        UserEntity userEntity = unsignFromCookie.unsign(request);
+        int client = 0;
+        if(userEntity!=null){
+            client = userEntity.getId();
+        }
         try{
-            response.setData(dao.findFollower(Integer.parseInt(idFollowed),0));
+            response.setData(dao.findFollower(Integer.parseInt(idFollowed),client));
             response.setResCode("1");
             response.setResMsg("success");
             return response;
@@ -57,9 +62,13 @@ public class FollowController extends BaseController<FollowEntity> {
         BasicResponse response = new BasicResponse();
         response.setResCode("-1");
         response.setResMsg("Error");
-//        FollowDAOImpl dao = new FollowDAOImpl();
+        UserEntity userEntity = unsignFromCookie.unsign(request);
+        int client = 0;
+        if(userEntity!=null){
+            client = userEntity.getId();
+        }
         try{
-            response.setData(dao.findFollowed(Integer.parseInt(idFollower),0));
+            response.setData(dao.findFollowed(Integer.parseInt(idFollower),client));
             response.setResCode("1");
             response.setResMsg("success");
             return response;
@@ -120,6 +129,7 @@ public class FollowController extends BaseController<FollowEntity> {
         followEntity.setIdFollower(idFollower);
         try{
             FollowEntity one =  followEntityBaseDAO.findByQuery(followEntity).get(0);
+            System.out.println(JSON.toJSONString(one));
             followEntityBaseDAO.delete(one);
 
             response.setResCode("1");

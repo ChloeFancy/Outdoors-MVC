@@ -1,6 +1,5 @@
 package controller;
 
-
 import DAO.Impl.BaseDAOImpl;
 import DAO.Impl.FollowDAOImpl;
 import DAO.Impl.StrategyDAOImpl;
@@ -38,6 +37,20 @@ public class UserController extends BaseController<UserEntity>{
 
     BaseDAOImpl<FollowEntity> followEntityBaseDAO = (BaseDAOImpl<FollowEntity>) context.getBean("baseDaoImpl");
 
+    @RequestMapping(value="/findBrief",method={RequestMethod.GET})
+    public @ResponseBody
+    BasicResponse findBrief(@RequestParam String id,HttpServletRequest request){
+        BasicResponse response = new BasicResponse();
+        response.setResCode("1");
+        response.setResMsg("success");
+        UserEntity userEntity = unsignFromCookie.unsign(request);
+        int client = 0;
+        if(userEntity!=null){
+            client = userEntity.getId();
+        }
+        response.setData(userDAO.findBrief(Integer.parseInt(id),client));
+        return response;
+    }
 
     @RequestMapping(value="/fuzzyQuery",method={RequestMethod.GET})
     public @ResponseBody

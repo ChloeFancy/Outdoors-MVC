@@ -95,6 +95,7 @@ public class UserDAOImpl extends BaseDAOImpl<UserEntity> implements UserDAO {
                 resultList.add(json);
             }
         }
+        tx.commit();
         return JSONArray.parseArray(JSON.toJSONString(resultList));
     }
 
@@ -117,10 +118,38 @@ public class UserDAOImpl extends BaseDAOImpl<UserEntity> implements UserDAO {
         }
         Query query= s.createQuery(hql);
         List list = query.list();
+        tx.commit();
         if(list.size()>0){
             return (UserEntity)list.get(0);
         }else{
             return null;
         }
+    }
+
+    @Override
+    public JSONObject findBrief(int id, int client) {
+        Session s = sessionFactory.openSession();
+        Transaction tx = s.beginTransaction();
+
+        String hql = "from UserEntity u where u.id = "+id;
+        Query query = s.createQuery(hql);
+        List result = query.list();
+        try{
+            UserEntity userEntity = (UserEntity)result.get(0);
+            JSONObject jsonObject = new JSONObject();
+            jsonObject.put("id",userEntity.getId());
+            jsonObject.put("photoPath",userEntity.getPhotoPath());
+            jsonObject.put("name",userEntity.getName());
+            hql = "from FollowEntity f where f.idFollowed="+id+" and f.idFollower = "+client;
+            System.out.println(hql);
+
+            query = s.createQuery(hql);
+            result = query.list();
+            jsonObject.put("canBeFollowed",!(result.size()>0));
+            return jsonObject;
+        }catch (Exception ex){
+            ex.printStackTrace();
+        }
+        return null;
     }
 }

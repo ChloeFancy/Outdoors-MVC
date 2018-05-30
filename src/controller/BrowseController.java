@@ -24,7 +24,7 @@ public class BrowseController extends BaseController<BrowseEntity> {
 
     @RequestMapping(value="/updateRecord",method = {RequestMethod.POST})
     public @ResponseBody
-    BasicResponse updateRecord(@RequestParam int idSpot, HttpServletRequest request)
+    BasicResponse updateRecord(@RequestParam String idSpot, HttpServletRequest request)
     {
         BasicResponse response = new BasicResponse();
         try{
@@ -37,7 +37,7 @@ public class BrowseController extends BaseController<BrowseEntity> {
             }
             int idUser = userEntity.getId();
             BrowseEntity browseEntity = new BrowseEntity();
-            browseEntity.setIdSpot(idSpot);
+            browseEntity.setIdSpot(Integer.parseInt(idSpot));
             browseEntity.setIdUser(idUser);
 
             if(dao.findByQuery(browseEntity).isEmpty()) {//没有存在过
