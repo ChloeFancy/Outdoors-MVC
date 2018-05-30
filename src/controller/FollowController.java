@@ -25,9 +25,7 @@ public class FollowController extends BaseController<FollowEntity> {
     ApplicationContext context =
             new ClassPathXmlApplicationContext("applicationContext.xml");
 
-//    FollowDAOImpl dao = (FollowDAOImpl) context.getBean("followDAOImpl");
-
-    FollowDAOImpl dao = new FollowDAOImpl();
+    FollowDAOImpl dao = (FollowDAOImpl) context.getBean("followDAOImpl");
 
     BaseDAOImpl<FollowEntity> baseDAO = (BaseDAOImpl<FollowEntity>) context.getBean("baseDaoImpl");
     BaseDAOImpl<FollowEntity> followEntityBaseDAO = (BaseDAOImpl<FollowEntity>) context.getBean("baseDaoImpl");
@@ -35,13 +33,13 @@ public class FollowController extends BaseController<FollowEntity> {
 
     @RequestMapping(value="/findFollower",method = {RequestMethod.GET})
     public @ResponseBody
-    BasicResponse findFollower(FollowEntity followed, HttpServletRequest request) {
+    BasicResponse findFollower(@RequestParam String idFollowed, HttpServletRequest request) {
         BasicResponse response = new BasicResponse();
         response.setResCode("-1");
         response.setResMsg("Error");
 //        FollowDAOImpl dao = new FollowDAOImpl();
         try{
-            response.setData(dao.findFollower(followed));
+            response.setData(dao.findFollower(Integer.parseInt(idFollowed),0));
             response.setResCode("1");
             response.setResMsg("success");
             return response;
@@ -55,13 +53,13 @@ public class FollowController extends BaseController<FollowEntity> {
 
     @RequestMapping(value="/findFollowed",method = {RequestMethod.GET})
     public @ResponseBody
-    BasicResponse findFollowed(FollowEntity follower, HttpServletRequest request) {
+    BasicResponse findFollowed(@RequestParam String idFollower, HttpServletRequest request) {
         BasicResponse response = new BasicResponse();
         response.setResCode("-1");
         response.setResMsg("Error");
 //        FollowDAOImpl dao = new FollowDAOImpl();
         try{
-            response.setData(dao.findFollowed(follower));
+            response.setData(dao.findFollowed(Integer.parseInt(idFollower),0));
             response.setResCode("1");
             response.setResMsg("success");
             return response;

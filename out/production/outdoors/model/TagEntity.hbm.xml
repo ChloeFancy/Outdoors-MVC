@@ -4,7 +4,7 @@
     "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
 
-    <class name="model.TagEntity" table="tag" schema="outdoors">
+    <class name="model.TagEntity" table="tag" schema="backup">
         <id name="id">
             <column name="id" sql-type="int(11)"/>
         </id>

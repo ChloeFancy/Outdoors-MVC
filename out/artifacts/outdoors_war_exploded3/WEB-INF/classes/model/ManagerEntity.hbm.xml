@@ -4,7 +4,7 @@
     "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
 
-    <class name="model.ManagerEntity" table="manager" schema="outdoors">
+    <class name="model.ManagerEntity" table="manager" schema="backup">
         <id name="id">
             <column name="id" sql-type="int(11)"/>
         </id>
@@ -12,7 +12,7 @@
             <column name="name" sql-type="varchar(20)" length="20"/>
         </property>
         <property name="password">
-            <column name="password" sql-type="varchar(32)" length="32" not-null="true"/>
+            <column name="password" sql-type="varchar(32)" length="32"/>
         </property>
     </class>
 </hibernate-mapping>

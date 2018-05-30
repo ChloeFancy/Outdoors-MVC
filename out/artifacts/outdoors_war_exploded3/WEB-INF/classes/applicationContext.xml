@@ -19,9 +19,9 @@
 
     <bean id="dataSource" class="org.apache.commons.dbcp2.BasicDataSource" destroy-method="close">
         <property name="driverClassName" value="com.mysql.jdbc.Driver"></property>
-        <property name="url" value="jdbc:mysql://118.25.108.103:3306/outdoors"></property>
+        <property name="url" value="jdbc:mysql://localhost:3306/backup"></property>
         <property name="username" value="root"/>
-        <property name="password" value="123456ok+CE"/>
+        <property name="password" value="19970929"/>
     </bean>
 
 
@@ -33,7 +33,7 @@
             <props>
                 <prop key="hibernate.dialect">org.hibernate.dialect.MySQLDialect</prop>
                 <prop key="hibernate.show_sql">true</prop>
-                <prop key="hibernate.connection.url">jdbc:mysql://118.25.108.103:3306/outdoors</prop>
+                <prop key="hibernate.connection.url">jdbc:mysql://localhost:3306/backup</prop>
                 <prop key="hibernate.connection.driver_class">com.mysql.jdbc.Driver</prop>
             </props>
         </property>
@@ -90,9 +90,11 @@
         </property>
     </bean>
 
-    <!--<bean id="followDAOImpl" class="DAO.Impl.FollowDAOImpl">-->
+    <bean id="followDAOImpl" class="DAO.Impl.FollowDAOImpl">
+        <property name="sessionFactory" ref="sessionFactory">
 
-    <!--</bean>-->
+        </property>
+    </bean>
 
     <bean id="spotDAOImpl" class="DAO.Impl.SpotDAOImpl">
         <property name="sessionFactory" ref="sessionFactory">

@@ -31,7 +31,7 @@ public class CommentDAOImpl implements CommentDAO {
         Session s = sessionFactory.openSession();
         Transaction tx = s.beginTransaction();
 
-        String hql = "select c.content,u.name,u.id from CommentEntity c,UserEntity u where u.id = c.idWriter and  c.idStrategy="+idStrategy ;
+        String hql = "select c.content,u.name,u.id,u.photoPath from CommentEntity c,UserEntity u where u.id = c.idWriter and  c.idStrategy="+idStrategy ;
         Query query= s.createQuery(hql);
         List<Object[]> list = query.list();
         List<JSONObject> result = new ArrayList<>();
@@ -40,8 +40,10 @@ public class CommentDAOImpl implements CommentDAO {
             jsonObject.put("content",objects[0]);
             jsonObject.put("name",objects[1]);
             jsonObject.put("id",objects[2]);
+            jsonObject.put("photoPath",objects[3]);
             result.add(jsonObject);
         }
+        tx.commit();
         return JSONArray.parseArray(JSON.toJSONString(result));
     }
 }

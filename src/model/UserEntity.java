@@ -4,7 +4,7 @@ import javax.persistence.*;
 import java.util.Objects;
 
 @Entity
-@Table(name = "user", schema = "outdoors", catalog = "")
+@Table(name = "user", schema = "backup", catalog = "")
 public class UserEntity {
     private int id;
     private String name;
@@ -78,10 +78,12 @@ public class UserEntity {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         UserEntity that = (UserEntity) o;
-        return
-                (Objects.equals(mail, that.mail) ||
-                        Objects.equals(tel, that.tel)) &&
-                        Objects.equals(password, that.password);
+        return id == that.id &&
+                Objects.equals(name, that.name) &&
+                Objects.equals(mail, that.mail) &&
+                Objects.equals(tel, that.tel) &&
+                Objects.equals(password, that.password) &&
+                Objects.equals(photoPath, that.photoPath);
     }
 
     @Override

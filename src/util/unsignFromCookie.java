@@ -11,7 +11,6 @@ public class unsignFromCookie {
         Cookie[] cookie = request.getCookies();
         for (int i = 0; i < cookie.length; i++) {
             Cookie cook = cookie[i];
-            System.out.println(cook.getName());
             if(cook.getName().equalsIgnoreCase("usertoken")){ //获取键
                 fromToken = JWT.unsign(cook.getValue().toString(),UserEntity.class);
             }

@@ -31,7 +31,7 @@ public class SpotDAOImpl implements SpotDAO {
         String hql = "select u from SpotEntity u where u.name like '%"+name+"%'";
         Query query= s.createQuery(hql);
         List<SpotEntity> list = query.list();
-
+        tx.commit();
         return JSONArray.parseArray(JSON.toJSONString(list));
     }
 

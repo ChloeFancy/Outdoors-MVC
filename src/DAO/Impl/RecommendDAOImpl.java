@@ -58,8 +58,6 @@ public class RecommendDAOImpl implements RecommendDAO {
             hql = "from SpotEntity ";
             query = s.createQuery(hql);
             allSpotList = query.list();
-//            allSpotList = spotDao.findList(spotEntity);
-
             for (RecommendEntity object : list) {
                 hql = "from SpotEntity where id = "+object.getIdSpot();
                 query = s.createQuery(hql);
@@ -83,6 +81,7 @@ public class RecommendDAOImpl implements RecommendDAO {
                 }
             }
         }
+        tx.commit();
         return resultList;
     }
 
@@ -92,7 +91,6 @@ public class RecommendDAOImpl implements RecommendDAO {
         Session s = sessionFactory.openSession();
         Transaction tx = s.beginTransaction();
         List<SpotEntity> resultList = new ArrayList<>();
-        SpotEntity spotEntity = new SpotEntity();
 
         String hql = "SELECT B.idSpot, SUM(B.count) FROM BrowseEntity B GROUP BY B.idSpot ORDER BY SUM(B.count) desc ";
         Query query = s.createQuery(hql);
@@ -108,6 +106,7 @@ public class RecommendDAOImpl implements RecommendDAO {
                 break;
             }
         }
+        tx.commit();
         return resultList;
     }
 }

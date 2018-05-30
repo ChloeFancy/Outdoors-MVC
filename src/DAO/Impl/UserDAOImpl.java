@@ -45,11 +45,8 @@ public class UserDAOImpl extends BaseDAOImpl<UserEntity> implements UserDAO {
                 &&!(userEntity.getMail()==null&&userEntity.getTel()==null)//都不为空
                 &&userEntity.getPassword()!=null)//都不为空
             return false;
-        System.out.println("***");
         tx.commit();
         s.close();
-        //sessionFactory.close();//不能关！！！
-        System.out.println("*****");
         return true;
     }
 
@@ -72,8 +69,7 @@ public class UserDAOImpl extends BaseDAOImpl<UserEntity> implements UserDAO {
                 JSONObject json = new JSONObject();
                 json.put("id",object.getId());
                 json.put("name",object.getName());
-                json.put("mail",object.getMail());
-                json.put("tel",object.getMail());
+                json.put("photoPath",object.getPhotoPath());
 
                 String findFollow = "select f from FollowEntity f where f.idFollower = "+currentUser
                         + " and f.idFollowed = "+object.getId();
@@ -88,15 +84,12 @@ public class UserDAOImpl extends BaseDAOImpl<UserEntity> implements UserDAO {
             Query query= s.createQuery(hql);
             List<UserEntity> list = query.list();
 
-
             for (UserEntity object : list) {
 
                 JSONObject json = new JSONObject();
                 json.put("id",object.getId());
                 json.put("name",object.getName());
-                json.put("mail",object.getMail());
-                json.put("tel",object.getMail());
-
+                json.put("photoPath",object.getPhotoPath());
                 json.put("canBeFollowed",true);
 
                 resultList.add(json);

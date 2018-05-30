@@ -3,9 +3,7 @@
     <session-factory>
         <!-- Database connection settings -->
         <property name = "connection.driver_class">com.mysql.jdbc.Driver</property>
-        <property name = "connection.url">jdbc:mysql://118.25.108.103:3306/outdoors</property>
-        <property name="hibernate.connection.username">root</property>
-        <property name="connection.password">123456ok+CE</property>
+        <property name = "connection.url">jdbc:mysql://localhost:3306/backup</property>
         <!-- JDBC connection pool (use the built-in) -->
         <!--
         <property name="connection.pool_size">1</property>
@@ -20,6 +18,18 @@
         <!--
         <property name="hbm2ddl.auto">update</property>
         -->
+
+        <property name="c3p0.min_size">5</property>
+        <!--<!—在连接池中可用数据库连接的最小数目&ndash;&gt;-->
+
+        <property name="c3p0.max_size">30</property>
+        <!--在连接池中所有数据库连接的最大数目-->
+
+        <property name="c3p0.time_out">1800</property>
+        <!--<!—设定数据库连接的超时时间&ndash;&gt;-->
+
+        <property name="c3p0.max_statement">1000</property>
+        <!--<!—可以被缓存的PreparedStatement的最大数目&ndash;&gt;-->
 
         <property name="hibernate.c3p0.max_size">100</property>
 

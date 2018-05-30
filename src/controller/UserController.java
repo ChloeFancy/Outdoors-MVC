@@ -2,6 +2,7 @@ package controller;
 
 
 import DAO.Impl.BaseDAOImpl;
+import DAO.Impl.FollowDAOImpl;
 import DAO.Impl.StrategyDAOImpl;
 import DAO.Impl.UserDAOImpl;
 import com.alibaba.fastjson.JSON;
@@ -20,6 +21,7 @@ import util.JWT;
 import util.unsignFromCookie;
 
 import javax.servlet.http.HttpServletRequest;
+import java.util.List;
 
 @Controller
 @RequestMapping("/user")
@@ -132,6 +134,7 @@ public class UserController extends BaseController<UserEntity>{
             if(userEntity!=null){
                 //仍处于登录状态
                 response.setResCode("1");
+                response.setData(userEntity);
                 response.setResMsg("success");
             }
             return response;
@@ -164,25 +167,38 @@ public class UserController extends BaseController<UserEntity>{
         return response;
     }
 
+    FollowDAOImpl followDAO = (FollowDAOImpl)context.getBean("followDAOImpl");
+
     @RequestMapping(value="/findUserDetail",method = {RequestMethod.GET})
     public @ResponseBody
-    BasicResponse findUserDetail(UserEntity userEntity, HttpServletRequest request) {
+    BasicResponse findUserDetail(int userId, HttpServletRequest request) {
         BasicResponse response = new BasicResponse();
         response.setResCode("-1");//用户已存在
         response.setResMsg("Error");
         try{
+
+            UserEntity userEntity = new UserEntity();
+            System.out.println(userId);
+            if(userId==0){
+                userEntity = unsignFromCookie.unsign(request);
+            }else{
+                userEntity.setId(userId);
+            }
+            int id = userEntity.getId();
             StrategyEntity tmp = new StrategyEntity();
-            tmp.setIdWriter(userEntity.getId());
+            tmp.setIdWriter(id);
             JSONObject result = new JSONObject();
             result.put("strategies",strategyEntityBaseDAO.findByQuery(tmp));
 
-            FollowEntity followEntity = new FollowEntity();
-            followEntity.setIdFollower(userEntity.getId());
-            result.put("follows",followEntityBaseDAO.findByQuery(followEntity));
+            UserEntity currentUser = unsignFromCookie.unsign(request);
+            int clientID = 0;
+            if(currentUser!=null){
+                clientID = currentUser.getId();
+            }
 
-            followEntity.setIdFollower(null);
-            followEntity.setIdFollowed(userEntity.getId());
-            result.put("followers",followEntityBaseDAO.findByQuery(followEntity));
+            result.put("follows",followDAO.findFollowed(userId,clientID));
+
+            result.put("followers",followDAO.findFollower(userId,clientID));
 
             result.put("user",userEntityBaseDAO.findById(userEntity));
 
@@ -190,7 +206,6 @@ public class UserController extends BaseController<UserEntity>{
             response.setResCode("1");
             return response;
         }catch(Exception ex){
-            response.setData(userEntity);
             ex.printStackTrace();
         }
         return response;

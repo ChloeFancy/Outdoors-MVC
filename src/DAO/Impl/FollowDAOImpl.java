@@ -2,8 +2,16 @@ package DAO.Impl;
 
 import DAO.BaseDAO;
 import DAO.FollowDAO;
+import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONObject;
 import model.FollowEntity;
 import model.UserEntity;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+import org.hibernate.query.Query;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -13,46 +21,98 @@ import java.util.List;
 
 public class FollowDAOImpl implements FollowDAO {
 
-    ApplicationContext context =
-            new ClassPathXmlApplicationContext("applicationContext.xml");
+    @Qualifier("sessionFactory")
+    @Autowired
+    private SessionFactory sessionFactory;
 
-    BaseDAOImpl<UserEntity> userEntityBaseDAO = (BaseDAOImpl<UserEntity>) context.getBean("baseDaoImpl");
-    BaseDAOImpl<FollowEntity> followEntityBaseDAO = (BaseDAOImpl<FollowEntity>) context.getBean("baseDaoImpl");
 
     @Override
-    public List<UserEntity> findFollower(FollowEntity followEntity) throws Exception {
-        List<UserEntity> resultList = new ArrayList<>();
-        List list = followEntityBaseDAO.findByQuery(followEntity);//包含follower的Follow集
-        Iterator iterator = list.iterator();
-        FollowEntity tempFollow;
+    public Boolean ifCanBeFollowedBy(int idFollowed, int idFollower) {
+        if(idFollower==0) return true;
+        Session s = sessionFactory.openSession();
+        Transaction tx = s.beginTransaction();
 
-        while(iterator.hasNext()){
-            //获取当前follower的id，构造tempUser
-            tempFollow = (FollowEntity)iterator.next();
-            UserEntity tempUser=new UserEntity();
-            tempUser.setId(tempFollow.getIdFollower());
-            System.out.println(tempUser.getId());
-            //根据id查询详细信息
-            tempUser = userEntityBaseDAO.findById(tempUser);
-            resultList.add(tempUser);
-        }
-        return resultList;
+        String findFollow = "from FollowEntity f where f.idFollower = "+idFollower
+                + " and f.idFollowed = "+idFollowed;
+        Query query1 = s.createQuery(findFollow);
+        List<UserEntity> list1 = query1.list();
+        tx.commit();
+
+        return !(list1.size()>0);
     }
-    public List<UserEntity> findFollowed(FollowEntity followEntity) throws Exception{
-        List<UserEntity> resultList = new ArrayList<>();
-        List list = followEntityBaseDAO.findByQuery(followEntity);//包含follower的Follow集
-        Iterator iterator = list.iterator();
-        FollowEntity tempFollow;
-        while(iterator.hasNext()){
-            //获取当前followed的id，构造tempUser
-            UserEntity tempUser=new UserEntity();
-            tempFollow = (FollowEntity)iterator.next();
-            tempUser.setId(tempFollow.getIdFollowed());
-            //根据id查询详细信息
-            tempUser=userEntityBaseDAO.findById(tempUser);
-            resultList.add(tempUser);
+
+//    @Override
+//    public List<JSONObject> addCanBeFollowed(List<JSONObject> list, int clientID) {
+//        System.out.println(JSON.toJSONString(list));
+//
+//        if(clientID>0){
+//            for(JSONObject user : list){
+//                user.put("canBeFollowed",
+//                        this.ifCanBeFollowedBy(Integer.parseInt(user.get("id").toString())
+//                                ,clientID));
+//            }
+//        }
+//        return list;
+//    }
+
+    @Override
+    public List<JSONObject> findFollower(int id,int clientID) throws Exception {
+        Session s = sessionFactory.openSession();
+        Transaction tx = s.beginTransaction();
+
+        String hql = "select  u.id,u.name,u.photoPath from UserEntity u ,FollowEntity f where u.id = f.idFollower " +
+                "and f.idFollowed = "+id;
+
+        Query query = s.createQuery(hql);
+
+        List<Object[]> list = query.list();
+        List<JSONObject> userList = new ArrayList<>();
+        for(Object[] objects : list){
+            JSONObject user = new JSONObject();
+            user.put("id",objects[0]);
+            user.put("name",objects[1]);
+            user.put("photoPath",objects[2]);
+
+            //先全部写true，然后再在后续的函数中，参照发送HTTP请求的客户端信息，判断canBeFollowed字段的值
+            user.put("canBeFollowed",ifCanBeFollowedBy(Integer.parseInt(objects[0].toString()),clientID));
+
+            userList.add(user);
         }
-        return resultList;
+
+        tx.commit();
+        return userList;
+    }
+
+    @Override
+    public List<JSONObject> findFollowed(int id,int clientID) throws Exception{
+
+        Session s = sessionFactory.openSession();
+        Transaction tx = s.beginTransaction();
+
+        String hql = "select  u.id,u.name,u.photoPath from UserEntity u ,FollowEntity f where u.id = f.idFollowed " +
+                "and f.idFollower = "+id;
+
+        Query query = s.createQuery(hql);
+
+        List<Object[]> list = query.list();
+        List<JSONObject> userList = new ArrayList<>();
+        for(Object[] objects : list){
+            JSONObject user = new JSONObject();
+            user.put("id",objects[0]);
+            user.put("name",objects[1]);
+            user.put("photoPath",objects[2]);
+
+            //先全部写true，然后再在后续的函数中，参照发送HTTP请求的客户端信息，判断canBeFollowed字段的值
+            user.put("canBeFollowed",ifCanBeFollowedBy(Integer.parseInt(objects[0].toString()),clientID));
+
+            userList.add(user);
+        }
+        tx.commit();
+        return userList;
+    }
+
+    public void setSessionFactory(SessionFactory sessionFactory) {
+        this.sessionFactory = sessionFactory;
     }
 
 //

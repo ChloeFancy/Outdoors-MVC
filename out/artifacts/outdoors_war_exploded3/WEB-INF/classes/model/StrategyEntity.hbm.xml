@@ -4,7 +4,7 @@
     "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
 
-    <class name="model.StrategyEntity" table="strategy" schema="outdoors">
+    <class name="model.StrategyEntity" table="strategy" schema="backup">
         <id name="id">
             <column name="id" sql-type="int(11)"/>
         </id>
@@ -18,13 +18,10 @@
             <column name="content" sql-type="text" />
         </property>
         <property name="photoPath">
-            <column name="photoPath" sql-type="varchar(50)" length="50"/>
+            <column name="photoPath" sql-type="varchar(50)" length="50" />
         </property>
-        <!--<property name="title">-->
-            <!--<column name="title" sql-type="varchar(50)" length="50" />-->
-        <!--</property>-->
         <property name="title">
-            <column name="title" sql-type="varchar(50)" length="50" not-null="true"/>
+            <column name="title" sql-type="varchar(50)" length="50" />
         </property>
     </class>
 </hibernate-mapping>
